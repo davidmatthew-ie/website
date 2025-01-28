@@ -1,2 +1,3 @@
-# website
-The code for my 11ty-based website.
+# My Website
+
+The code for my new website, moving from WordPress to Eleventy.
