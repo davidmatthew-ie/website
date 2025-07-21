@@ -1,0 +1,33 @@
+---
+layout: layouts/html.html
+---
+
+{% set js %}
+  {% include '../js/menuToggle.js' %}
+  {% include '../js/pageNav.js' %}
+  {% include '../js/scrollBar.js' %}
+  {% include '../js/scrollProgress.js' %}
+  {% include '../js/index.js' %}
+{% endset %}
+
+<body class="bg-zinc-800 text-zinc-300">
+
+  <div class="min-h-screen lg:grid lg:grid-cols-12 xl:container">
+
+    {% include './header.html' %}
+
+    {% include './nav.html' %}
+
+    <div class="px-5 pt-20 pb-40 grid grid-cols-4 md:px-10 lg:col-span-9 xl:px-0 xl:col-span-10">
+
+      {{ content | safe }}
+
+    </div>
+
+  </div>
+
+  {% include './footer.html' %}
+
+  <script type="module">{{ js | safe }}</script>
+
+</body>

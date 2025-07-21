@@ -1,0 +1,13 @@
+{% from 'macros/icon.njk' import icon %}
+
+{% macro button(text, link, iconName) %}
+
+  <a class="block flex place-items-center py-3 px-5 w-fit text-lg text-zinc-100 font-bold bg-teal-700 no-underline rounded-md transition-colors hover:brightness-115" href="{{ link }}">
+
+    {{ icon(iconName, 'fill-white w-5 mr-2') }}
+
+    <span>{{ text }}</span>
+
+  </a>
+
+{% endmacro %}

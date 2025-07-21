@@ -1,0 +1,9 @@
+{% macro codepen(title, id, height, tab, preview = false) %}
+
+  <iframe height="{{ height }}" class="my-12 p-2 bg-zinc-900 rounded-md w-full" scrolling="no" title="{{ title }}" src="https://codepen.io/davidmatthew/embed/{{ 'preview/' if preview }}{{ id }}?default-tab={{ tab }}%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+
+    See the Pen by David Matthew (<a href="https://codepen.io/davidmatthew">@davidmatthew</a>) on <a href="https://codepen.io/davidmatthew/pen/{{ id }}">CodePen</a>.
+
+  </iframe>
+
+{% endmacro %}

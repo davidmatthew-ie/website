@@ -1,0 +1,10 @@
+---
+title: "Blog"
+permalink: blog/
+---
+
+{% set post_list = collections['post'] %}
+
+{% from 'macros/posts.njk' import posts %}
+
+{{ posts('h2', post_list, false) }}

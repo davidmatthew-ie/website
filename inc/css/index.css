@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+@import './fonts.css' layer(components);
+@import './typography.css' layer(components);
+@import './prism.css' layer(components);
+@custom-variant dark (&:where(.dark, .dark *));
+@utility container { margin: auto }
+@theme {
+  --font-sans: "Source Sans Pro", Helvetica, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-transition-duration: 200ms;
+  --animation-duration: 800ms;
+  --animation-curve: ease-in-out;
+
+  --animate-fade-in-up: fade-in-up var(--animation-duration) var(--animation-curve) both;
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  --animate-fade-in-down: fade-in-down var(--animation-duration) var(--animation-curve);
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  --animate-fade-in-left: fade-in-left var(--animation-duration) var(--animation-curve);
+  @keyframes fade-in-left {
+    from {
+      opacity: 0;
+      transform: translate3d(-100px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  --animate-fade-in-right: fade-in-right var(--animation-duration) var(--animation-curve);
+  @keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translate3d(100px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+}

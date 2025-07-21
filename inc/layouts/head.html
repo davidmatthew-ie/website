@@ -1,0 +1,12 @@
+{% set posthog %}
+  {% include 'js/posthog.js' %}
+{% endset %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="{{ eleventy.generator }}">
+  <link href="/css/index.css" rel="stylesheet">
+  <script>{{ posthog | safe }}</script>
+  <title>{{ title }}</title>
+</head>

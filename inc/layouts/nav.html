@@ -1,0 +1,19 @@
+{% from 'macros/nav.njk' import nav %}
+
+<div class="hidden h-full border-r-2 border-r-zinc-600 lg:flex col-span-3 xl:col-span-2 {{ 'animate-fade-in-left' if page.url == '/' }}">
+
+  <a href="/" class="fixed top-5 block w-16 h-16 p-4 border-2 border-teal-500 rounded-full z-10 hover:bg-zinc-700/30 transition-all duration-500">
+
+    {% include '../img/dm-logo-2025.svg' %}
+
+  </a>
+
+  {{ nav(links) }}
+
+</div>
+
+<div id="mobile-menu" class="fixed top-0 left-0 z-10 w-full h-full flex justify-center items-center bg-zinc-800/95  -translate-x-full transition duration-500">
+
+  {{ nav(links) }}
+
+</div>

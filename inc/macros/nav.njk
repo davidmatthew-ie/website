@@ -1,0 +1,33 @@
+{% from 'macros/icon.njk' import icon %}
+
+{% macro nav(links) %}
+
+  <nav class="flex mt-14 lg:mt-0 lg:fixed lg:h-screen lg:items-center">
+
+    <ul class="list-none p-0 text-xl md:text-2xl">
+
+      {% for link in links %}
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="{{ link.url }}" {{ 'target="_blank"' if link.newTab }}>
+
+            {{ icon(link.icon, [link.iconColour, 'w-8'].join(' ')) }}
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:{{ link.accentColour }} group-hover:after:w-6">
+
+              {{ link.text | upper }}
+
+            </span>
+
+          </a>
+
+        </li>
+
+      {% endfor %}
+
+    </ul>
+
+  </nav>
+
+{% endmacro %}

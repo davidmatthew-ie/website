@@ -1,0 +1,40 @@
+{% macro posts(heading, post_list, url = false) %}
+
+  {% from "./card.njk" import card %}
+
+  {% set colours = cycler(
+    'text-amber-400',
+    'text-lime-400',
+    'text-emerald-400',
+    'text-cyan-400'
+  ) %}
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5 my-10">
+
+    {% for post in post_list | reverse %}
+
+      {% set post_content %} {{
+        post.data.excerpt if post.data.excerpt else 
+        post.content | safe | striptags | truncate(110)
+      }} {% endset %}
+
+      {% set animation_delay = 'animate-[fade-in-up_700ms_' ~ loop.index ~ '00ms_both]' %}
+
+      {{ card(
+        heading,
+        post.url if url else post.data.permalink,
+        post.data.title,
+        colours.next(),
+        post.date | format_date,
+        post.data.tags | filter_tags | join(', '),
+        post_content,
+        animation_delay
+      ) }}
+
+    {% endfor %}
+
+  </div>
+
+{% endmacro %}
+
+

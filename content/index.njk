@@ -1,0 +1,40 @@
+---
+title: Music, Creative Coding & Web Dev
+custom: true
+---
+
+{% from 'macros/button.njk' import button %}
+{% from 'macros/posts.njk' import posts %}
+{% set post_list = collections['x'] %}
+
+<div class="flex flex-col lg:flex-row items-center">
+
+  <a href="/about/" class="w-40 h-40 shrink-0 rounded-full p-3 border-4 border-teal-500 mb-4 lg:mb-0 animate-fade-in-down">
+
+    <div class="rounded-full overflow-hidden">
+
+      <img class="origin-center transition-transform hover:scale-110" src="img/portrait-bw-2023-12.jpg" alt="David Matthew">
+
+    </div>
+
+  </a>
+
+  <div class="animate-fade-in-right text-center lg:text-left lg:ml-5">
+
+    <h1 class="m-0">{{ site.title }}</h1>
+
+    <h2 class="m-0">{{ site.tagline }}</h2>
+
+  </div>
+
+</div>
+
+<h3 class="text-center after:block after:mx-auto after:mt-2 after:h-1 after:w-10 after:bg-purple-500 lg:text-left lg:after:mx-0 animate-fade-in-right">Featured Posts</h3>
+
+{{ posts('h2', post_list, false, false) }}
+
+<div class="animate-fade-in-right">
+
+  {{ button('See All Posts', '/blog/', 'left-to-right-list-dash-solid-rounded') }}
+
+</div>

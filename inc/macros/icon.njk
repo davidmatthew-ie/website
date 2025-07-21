@@ -1,0 +1,10 @@
+{% macro icon(name, classes) %}
+
+  <span class="{{ classes }} inline-block">
+
+    {% include 'img/icons/' ~ name ~ '.svg' %}
+
+  </span>
+
+{% endmacro %}
+

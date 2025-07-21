@@ -1,0 +1,1692 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Eleventy v3.0.0">
+  <link href="/css/index.css" rel="stylesheet">
+  <script>
+  /**
+ * Cookieless tracking with PostHog web analytics.
+ *
+ * @see https://posthog.com/tutorials/cookieless-tracking
+ */
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+
+posthog.init('phc_b5jnQjsNIbDKmIDhZoA4skCh7E645E8AAdBp6U8TAWQ', {
+  api_host:'https://eu.i.posthog.com', 
+  defaults: '2025-05-24',
+  persistence: 'memory',
+  bootstrap: {
+    distinctID: 'user distinct id',
+    featureFlags: {
+      'feature-flag-1': true,
+      'feature-flag-2': false,
+    },
+  }
+})
+</script>
+  <title></title>
+</head>
+
+
+
+
+<body class="bg-zinc-800 text-zinc-300">
+
+  <div class="min-h-screen lg:grid lg:grid-cols-12 xl:container">
+
+    <header id="top-bar" class="sticky top-0 left-0 z-20 w-full flex justify-between items-center p-5 bg-zinc-800 border-b-2 border-b-zinc-600 transition-all duration-500 md:px-10 lg:hidden">
+
+  <a href="/" class="block w-16 h-16 p-4 border-2 border-teal-500 rounded-full z-10 hover:bg-zinc-700/30 transition-all duration-500">
+
+    <svg version="1.1" viewBox="0 0 52.92 47.63" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(.4709 0 0 .4708 -136.5 -42.46)" stroke-width="3.996">
+    <path class="fill-teal-500" d="m379.9 90.22-30.91 30.91 16.86 16.86 13.96-13.96v67.33h22.56v-101.1z" style="paint-order:stroke markers fill"/>
+    <path class="fill-teal-700" d="m290 90.22v101.1h22.48l30.91-30.91-16.86-16.86-14.05 14.05v-33.72l33.72 33.72 16.86-16.86-50.59-50.59z" style="paint-order:stroke markers fill"/>
+  </g>
+</svg>
+
+
+  </a>
+
+  <div id="nav-toggle" class="w-10 transition duration-350 lg:hidden">
+
+    <div class="h-1 bg-teal-500 mb-3 transition duration-350"></div>
+
+    <div class="h-1 ml-3 bg-teal-700 mb-3 transition duration-350"></div>
+
+    <div class="h-1 bg-teal-500 transition duration-350"></div>
+
+  </div>
+
+</header>
+
+
+
+    
+
+<div class="hidden h-full border-r-2 border-r-zinc-600 lg:flex col-span-3 xl:col-span-2 ">
+
+  <a href="/" class="fixed top-5 block w-16 h-16 p-4 border-2 border-teal-500 rounded-full z-10 hover:bg-zinc-700/30 transition-all duration-500">
+
+    <svg version="1.1" viewBox="0 0 52.92 47.63" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(.4709 0 0 .4708 -136.5 -42.46)" stroke-width="3.996">
+    <path class="fill-teal-500" d="m379.9 90.22-30.91 30.91 16.86 16.86 13.96-13.96v67.33h22.56v-101.1z" style="paint-order:stroke markers fill"/>
+    <path class="fill-teal-700" d="m290 90.22v101.1h22.48l30.91-30.91-16.86-16.86-14.05 14.05v-33.72l33.72 33.72 16.86-16.86-50.59-50.59z" style="paint-order:stroke markers fill"/>
+  </g>
+</svg>
+
+
+  </a>
+
+  
+
+  <nav class="flex mt-14 lg:mt-0 lg:fixed lg:h-screen lg:items-center">
+
+    <ul class="list-none p-0 text-xl md:text-2xl">
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="/" >
+
+            
+
+  <span class="text-sky-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M7.08848 4.76364L6.08847 5.54453C4.57182 6.72887 3.81348 7.32105 3.40674 8.15601C3 8.99097 3 9.95552 3 11.8846V13.9767C3 17.763 3 19.6562 4.17157 20.8325C5.11466 21.7793 6.52043 21.964 9 22V18.0057C9 17.0738 9 16.6078 9.15224 16.2403C9.35523 15.7502 9.74458 15.3609 10.2346 15.1579C10.6022 15.0057 11.0681 15.0057 12 15.0057C12.9319 15.0057 13.3978 15.0057 13.7654 15.1579C14.2554 15.3609 14.6448 15.7502 14.8478 16.2403C15 16.6078 15 17.0738 15 18.0057V22C17.4796 21.964 18.8853 21.7793 19.8284 20.8325C21 19.6562 21 17.763 21 13.9767V11.8846C21 9.95552 21 8.99097 20.5933 8.15601C20.1865 7.32105 19.4282 6.72887 17.9115 5.54453L16.9115 4.76364C14.5521 2.92121 13.3724 2 12 2C10.6276 2 9.44787 2.92121 7.08848 4.76364Z" fill="currentColor"></path>
+    <path d="M7.08848 4.76364L6.08847 5.54453C4.57182 6.72887 3.81348 7.32105 3.40674 8.15601C3 8.99097 3 9.95552 3 11.8846V13.9767C3 17.763 3 19.6562 4.17157 20.8325C5.11466 21.7793 6.52043 21.964 9 22V18.0057C9 17.0738 9 16.6078 9.15224 16.2403C9.35523 15.7502 9.74458 15.3609 10.2346 15.1579C10.6022 15.0057 11.0681 15.0057 12 15.0057C12.9319 15.0057 13.3978 15.0057 13.7654 15.1579C14.2554 15.3609 14.6448 15.7502 14.8478 16.2403C15 16.6078 15 17.0738 15 18.0057V22C17.4796 21.964 18.8853 21.7793 19.8284 20.8325C21 19.6562 21 17.763 21 13.9767V11.8846C21 9.95552 21 8.99097 20.5933 8.15601C20.1865 7.32105 19.4282 6.72887 17.9115 5.54453L16.9115 4.76364C14.5521 2.92121 13.3724 2 12 2C10.6276 2 9.44787 2.92121 7.08848 4.76364Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-sky-400 group-hover:after:w-6">
+
+              HOME
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="/about/" >
+
+            
+
+  <span class="text-cyan-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="currentColor" stroke-width="1.5"></path>
+    <path opacity="0.4" d="M12.2422 17V12C12.2422 11.5286 12.2422 11.2929 12.0957 11.1464C11.9493 11 11.7136 11 11.2422 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path opacity="0.4" d="M11.992 8H12.001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-cyan-400 group-hover:after:w-6">
+
+              ABOUT ME
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="/generative-art-javascript-svg/" >
+
+            
+
+  <span class="text-teal-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M20.5 16.9286V10C20.5 6.22876 20.5 4.34315 19.3284 3.17157C18.1569 2 16.2712 2 12.5 2H11.5C7.72876 2 5.84315 2 4.67157 3.17157C3.5 4.34315 3.5 6.22876 3.5 10V19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+    <path d="M20.5 17H6C4.61929 17 3.5 18.1193 3.5 19.5C3.5 20.8807 4.61929 22 6 22H20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+    <path opacity="0.4" d="M20.5 22C19.1193 22 18 20.8807 18 19.5C18 18.1193 19.1193 17 20.5 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+    <path opacity="0.4" d="M15 7L9 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path opacity="0.4" d="M12 11L9 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-teal-400 group-hover:after:w-6">
+
+              BOOK
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="/blog/" >
+
+            
+
+  <span class="text-emerald-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M7 7.5H6C4.11438 7.5 3.17157 7.5 2.58579 8.08579C2 8.67157 2 9.61438 2 11.5V18C2 19.3807 3.11929 20.5 4.5 20.5C5.88071 20.5 7 19.3807 7 18V7.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path opacity="0.4" d="M10.5 8H18.5M10.5 12H13M18.5 12H16M10.5 16H13M18.5 16H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M16 3.5H11C10.07 3.5 9.60504 3.5 9.22354 3.60222C8.18827 3.87962 7.37962 4.68827 7.10222 5.72354C7 6.10504 7 6.57003 7 7.5V18C7 19.3807 5.88071 20.5 4.5 20.5H16C18.8284 20.5 20.2426 20.5 21.1213 19.6213C22 18.7426 22 17.3284 22 14.5V9.5C22 6.67157 22 5.25736 21.1213 4.37868C20.2426 3.5 18.8284 3.5 16 3.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-emerald-400 group-hover:after:w-6">
+
+              BLOG
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="https://github.com/davidmatthew-ie" >
+
+            
+
+  <span class="text-green-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M17 8L18.8398 9.85008C19.6133 10.6279 20 11.0168 20 11.5C20 11.9832 19.6133 12.3721 18.8398 13.1499L17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M7 8L5.16019 9.85008C4.38673 10.6279 4 11.0168 4 11.5C4 11.9832 4.38673 12.3721 5.16019 13.1499L7 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.5 4L9.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-green-400 group-hover:after:w-6">
+
+              CODE
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="https://open.spotify.com/artist/2CVCluSD7hTfhhJCkm0C3x" target=&quot;_blank&quot;>
+
+            
+
+  <span class="text-lime-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M2 3L20 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path opacity="0.4" d="M2 10L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M2 17L9 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M18.25 19C18.25 20.6569 16.8509 22 15.125 22C13.3991 22 12 20.6569 12 19C12 17.3431 13.3991 16 15.125 16C16.8509 16 18.25 17.3431 18.25 19ZM18.25 19V10C18.6667 10.6 19 13.12 22 13.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-lime-400 group-hover:after:w-6">
+
+              MUSIC
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="mailto:davidmatthew.ie@gmail.com" >
+
+            
+
+  <span class="text-yellow-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M2 5L8.91302 8.92462C11.4387 10.3585 12.5613 10.3585 15.087 8.92462L22 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+    <path d="M10.5 19.5C10.0337 19.4939 9.56682 19.485 9.09883 19.4732C5.95033 19.3941 4.37608 19.3545 3.24496 18.2184C2.11383 17.0823 2.08114 15.5487 2.01577 12.4814C1.99475 11.4951 1.99474 10.5147 2.01576 9.52843C2.08114 6.46113 2.11382 4.92748 3.24495 3.79139C4.37608 2.6553 5.95033 2.61573 9.09882 2.53658C11.0393 2.4878 12.9607 2.48781 14.9012 2.53659C18.0497 2.61574 19.6239 2.65532 20.755 3.79141C21.8862 4.92749 21.9189 6.46114 21.9842 9.52844C21.9939 9.98251 21.9991 10.1965 21.9999 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path opacity="0.4" d="M19 17C19 17.8284 18.3284 18.5 17.5 18.5C16.6716 18.5 16 17.8284 16 17C16 16.1716 16.6716 15.5 17.5 15.5C18.3284 15.5 19 16.1716 19 17ZM19 17V17.5C19 18.3284 19.6716 19 20.5 19C21.3284 19 22 18.3284 22 17.5V17C22 14.5147 19.9853 12.5 17.5 12.5C15.0147 12.5 13 14.5147 13 17C13 19.4853 15.0147 21.5 17.5 21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-yellow-400 group-hover:after:w-6">
+
+              CONTACT
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+    </ul>
+
+  </nav>
+
+
+
+</div>
+
+<div id="mobile-menu" class="fixed top-0 left-0 z-10 w-full h-full flex justify-center items-center bg-zinc-800/95  -translate-x-full transition duration-500">
+
+  
+
+  <nav class="flex mt-14 lg:mt-0 lg:fixed lg:h-screen lg:items-center">
+
+    <ul class="list-none p-0 text-xl md:text-2xl">
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="/" >
+
+            
+
+  <span class="text-sky-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M7.08848 4.76364L6.08847 5.54453C4.57182 6.72887 3.81348 7.32105 3.40674 8.15601C3 8.99097 3 9.95552 3 11.8846V13.9767C3 17.763 3 19.6562 4.17157 20.8325C5.11466 21.7793 6.52043 21.964 9 22V18.0057C9 17.0738 9 16.6078 9.15224 16.2403C9.35523 15.7502 9.74458 15.3609 10.2346 15.1579C10.6022 15.0057 11.0681 15.0057 12 15.0057C12.9319 15.0057 13.3978 15.0057 13.7654 15.1579C14.2554 15.3609 14.6448 15.7502 14.8478 16.2403C15 16.6078 15 17.0738 15 18.0057V22C17.4796 21.964 18.8853 21.7793 19.8284 20.8325C21 19.6562 21 17.763 21 13.9767V11.8846C21 9.95552 21 8.99097 20.5933 8.15601C20.1865 7.32105 19.4282 6.72887 17.9115 5.54453L16.9115 4.76364C14.5521 2.92121 13.3724 2 12 2C10.6276 2 9.44787 2.92121 7.08848 4.76364Z" fill="currentColor"></path>
+    <path d="M7.08848 4.76364L6.08847 5.54453C4.57182 6.72887 3.81348 7.32105 3.40674 8.15601C3 8.99097 3 9.95552 3 11.8846V13.9767C3 17.763 3 19.6562 4.17157 20.8325C5.11466 21.7793 6.52043 21.964 9 22V18.0057C9 17.0738 9 16.6078 9.15224 16.2403C9.35523 15.7502 9.74458 15.3609 10.2346 15.1579C10.6022 15.0057 11.0681 15.0057 12 15.0057C12.9319 15.0057 13.3978 15.0057 13.7654 15.1579C14.2554 15.3609 14.6448 15.7502 14.8478 16.2403C15 16.6078 15 17.0738 15 18.0057V22C17.4796 21.964 18.8853 21.7793 19.8284 20.8325C21 19.6562 21 17.763 21 13.9767V11.8846C21 9.95552 21 8.99097 20.5933 8.15601C20.1865 7.32105 19.4282 6.72887 17.9115 5.54453L16.9115 4.76364C14.5521 2.92121 13.3724 2 12 2C10.6276 2 9.44787 2.92121 7.08848 4.76364Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-sky-400 group-hover:after:w-6">
+
+              HOME
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="/about/" >
+
+            
+
+  <span class="text-cyan-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="currentColor" stroke-width="1.5"></path>
+    <path opacity="0.4" d="M12.2422 17V12C12.2422 11.5286 12.2422 11.2929 12.0957 11.1464C11.9493 11 11.7136 11 11.2422 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path opacity="0.4" d="M11.992 8H12.001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-cyan-400 group-hover:after:w-6">
+
+              ABOUT ME
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="/generative-art-javascript-svg/" >
+
+            
+
+  <span class="text-teal-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M20.5 16.9286V10C20.5 6.22876 20.5 4.34315 19.3284 3.17157C18.1569 2 16.2712 2 12.5 2H11.5C7.72876 2 5.84315 2 4.67157 3.17157C3.5 4.34315 3.5 6.22876 3.5 10V19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+    <path d="M20.5 17H6C4.61929 17 3.5 18.1193 3.5 19.5C3.5 20.8807 4.61929 22 6 22H20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+    <path opacity="0.4" d="M20.5 22C19.1193 22 18 20.8807 18 19.5C18 18.1193 19.1193 17 20.5 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+    <path opacity="0.4" d="M15 7L9 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path opacity="0.4" d="M12 11L9 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-teal-400 group-hover:after:w-6">
+
+              BOOK
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="/blog/" >
+
+            
+
+  <span class="text-emerald-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M7 7.5H6C4.11438 7.5 3.17157 7.5 2.58579 8.08579C2 8.67157 2 9.61438 2 11.5V18C2 19.3807 3.11929 20.5 4.5 20.5C5.88071 20.5 7 19.3807 7 18V7.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path opacity="0.4" d="M10.5 8H18.5M10.5 12H13M18.5 12H16M10.5 16H13M18.5 16H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M16 3.5H11C10.07 3.5 9.60504 3.5 9.22354 3.60222C8.18827 3.87962 7.37962 4.68827 7.10222 5.72354C7 6.10504 7 6.57003 7 7.5V18C7 19.3807 5.88071 20.5 4.5 20.5H16C18.8284 20.5 20.2426 20.5 21.1213 19.6213C22 18.7426 22 17.3284 22 14.5V9.5C22 6.67157 22 5.25736 21.1213 4.37868C20.2426 3.5 18.8284 3.5 16 3.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-emerald-400 group-hover:after:w-6">
+
+              BLOG
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="https://github.com/davidmatthew-ie" >
+
+            
+
+  <span class="text-green-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M17 8L18.8398 9.85008C19.6133 10.6279 20 11.0168 20 11.5C20 11.9832 19.6133 12.3721 18.8398 13.1499L17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M7 8L5.16019 9.85008C4.38673 10.6279 4 11.0168 4 11.5C4 11.9832 4.38673 12.3721 5.16019 13.1499L7 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.5 4L9.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-green-400 group-hover:after:w-6">
+
+              CODE
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="https://open.spotify.com/artist/2CVCluSD7hTfhhJCkm0C3x" target=&quot;_blank&quot;>
+
+            
+
+  <span class="text-lime-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M2 3L20 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path opacity="0.4" d="M2 10L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M2 17L9 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M18.25 19C18.25 20.6569 16.8509 22 15.125 22C13.3991 22 12 20.6569 12 19C12 17.3431 13.3991 16 15.125 16C16.8509 16 18.25 17.3431 18.25 19ZM18.25 19V10C18.6667 10.6 19 13.12 22 13.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-lime-400 group-hover:after:w-6">
+
+              MUSIC
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+        <li class="my-5 group">
+
+          <a class="flex items-center no-underline font-medium" href="mailto:davidmatthew.ie@gmail.com" >
+
+            
+
+  <span class="text-yellow-400 w-8 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M2 5L8.91302 8.92462C11.4387 10.3585 12.5613 10.3585 15.087 8.92462L22 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+    <path d="M10.5 19.5C10.0337 19.4939 9.56682 19.485 9.09883 19.4732C5.95033 19.3941 4.37608 19.3545 3.24496 18.2184C2.11383 17.0823 2.08114 15.5487 2.01577 12.4814C1.99475 11.4951 1.99474 10.5147 2.01576 9.52843C2.08114 6.46113 2.11382 4.92748 3.24495 3.79139C4.37608 2.6553 5.95033 2.61573 9.09882 2.53658C11.0393 2.4878 12.9607 2.48781 14.9012 2.53659C18.0497 2.61574 19.6239 2.65532 20.755 3.79141C21.8862 4.92749 21.9189 6.46114 21.9842 9.52844C21.9939 9.98251 21.9991 10.1965 21.9999 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path opacity="0.4" d="M19 17C19 17.8284 18.3284 18.5 17.5 18.5C16.6716 18.5 16 17.8284 16 17C16 16.1716 16.6716 15.5 17.5 15.5C18.3284 15.5 19 16.1716 19 17ZM19 17V17.5C19 18.3284 19.6716 19 20.5 19C21.3284 19 22 18.3284 22 17.5V17C22 14.5147 19.9853 12.5 17.5 12.5C15.0147 12.5 13 14.5147 13 17C13 19.4853 15.0147 21.5 17.5 21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+            <span class="ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:bg-yellow-400 group-hover:after:w-6">
+
+              CONTACT
+
+            </span>
+
+          </a>
+
+        </li>
+
+      
+
+    </ul>
+
+  </nav>
+
+
+
+</div>
+
+
+    <div class="px-5 pt-20 pb-40 grid grid-cols-4 md:px-10 lg:col-span-9 xl:px-0 xl:col-span-10">
+
+      
+<div class="col-span-4 xl:px-20">
+
+  
+
+    
+<h1 class="after:block after:mt-6 after:h-2 after:w-16 after:bg-purple-500 animate-fade-in-right">Tagged “JavaScript”</h1>
+
+
+
+
+
+
+
+  
+
+  
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5 my-10">
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_100ms_both]">
+
+    <a href="/11twyg-eleventy-with-twig-and-yaml/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">11twyg - Eleventy with Twig and YAML</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-amber-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">28 May 2024</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-amber-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">Eleventy, JavaScript</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> Eleventy is an elegant static site generator that I&#39;ve become a little obsessed with lately. It&#39;s light, fast,... </p>
+
+    <span class="text-amber-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_200ms_both]">
+
+    <a href="/book-release-generative-art-with-javascript-and-svg/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">Book Release: Generative Art with JavaScript and SVG</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-lime-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">9 Apr 2024</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-lime-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">Generative Art, JavaScript, SVG</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> Plug time! Apress have just released my book Generative Art with JavaScript and SVG. It&#39;s something I&#39;ve been... </p>
+
+    <span class="text-lime-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_300ms_both]">
+
+    <a href="/generative-art-javascript-svg/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">Book: Generative Art with JavaScript and SVG</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-emerald-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">22 Mar 2024</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-emerald-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">Generative Art, JavaScript, SVG</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> Here you&#39;ll find all the CodePen examples accompanying my book Generative Art with JavaScript and SVG,... </p>
+
+    <span class="text-emerald-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_400ms_both]">
+
+    <a href="/how-to-use-parcel-and-tailwind-with-wordpress/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">How to use Parcel and Tailwind with WordPress</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-cyan-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">30 Jun 2022</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-cyan-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">CSS, JavaScript, WordPress</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> I’m a big fan of the ParcelJS bundler.* It’s simpler and offers much more out-of-the-box functionality than... </p>
+
+    <span class="text-cyan-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_500ms_both]">
+
+    <a href="/creating-an-oscilloscope-with-javascript/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">Creating an Oscilloscope with JavaScript and the Web Audio API</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-amber-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">12 May 2022</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-amber-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">JavaScript, Web Audio</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> The oscilloscope is what you might call the archetypal audio visualiser, portraying sound in its most... </p>
+
+    <span class="text-amber-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_600ms_both]">
+
+    <a href="/p5js-vs-html-canvas/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">Should I Use p5js or Plain JavaScript (HTML Canvas)?</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-lime-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">12 Aug 2021</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-lime-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">Canvas, Generative Art, JavaScript</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> This is a question I gave quite a lot of thought before embarking on my Canvas API tutorials, so I&#39;ll try to... </p>
+
+    <span class="text-lime-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_700ms_both]">
+
+    <a href="/creative-coding-with-svg-circles-rectangles-viewbox/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">Creative Coding with SVG: Circles, Rectangles and the ViewBox</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-emerald-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">20 Jun 2021</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-emerald-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">JavaScript, SVG</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> Update 2025: this was originally to be a series but later developed into a book on Generative Art and SVG.... </p>
+
+    <span class="text-emerald-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_800ms_both]">
+
+    <a href="/the-canvas-api-part-4-points-paths-and-colours/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">The Canvas API, Part 4: Points, Paths and Colours</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-cyan-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">7 Mar 2021</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-cyan-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">Canvas, JavaScript</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> This is part 4 in a series on the Canvas API. Up to this Point So far, we&#39;ve covered how the Canvas API came... </p>
+
+    <span class="text-cyan-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_900ms_both]">
+
+    <a href="/the-canvas-api-part-3-a-retina-ready-responsive-canvas/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">The Canvas API, Part 3: A Retina-Ready, Responsive Canvas</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-amber-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">13 Feb 2021</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-amber-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">Canvas, JavaScript</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> This is part 3 in a series on the Canvas API. Resolution In part 1 of this series I mentioned that the... </p>
+
+    <span class="text-amber-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_1000ms_both]">
+
+    <a href="/the-canvas-api-part-2-basic-shapes-and-the-2d-context/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">The Canvas API, Part 2: Basic Shapes and the 2D Context</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-lime-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">21 Jan 2021</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-lime-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">Canvas, JavaScript</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> This is part 2 in a series on the Canvas API. Boilerplate First, create a folder and call it something like... </p>
+
+    <span class="text-lime-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+      
+
+      
+
+      
+
+  <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-[fade-in-up_700ms_1100ms_both]">
+
+    <a href="/the-canvas-api-part-1-the-background/" class="absolute top-0 left-0 h-full w-full z-10"></a>
+
+    <h2 class="m-0 text-xl">The Canvas API, Part 1: The Background</h2>
+
+    <div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+      <div class="flex place-items-center mb-1.5 sm:mb-0">
+
+        
+
+  <span class="text-emerald-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M13 4H11C7.22874 4 5.34312 4 4.17155 5.17157C3.22846 6.11466 3.04454 7.52043 3.00867 10H20.9913C20.9554 7.52043 20.7715 6.11466 19.8284 5.17157C18.6568 4 16.7712 4 13 4Z" fill="currentColor"></path>
+    <path d="M16 2V6M8 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.9955 14H12.0045M11.9955 18H12.0045M15.991 14H16M8 14H8.00897M8 18H8.00897" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 mr-3 text-zinc-400">4 Oct 2020</span>
+
+      </div>
+
+      <div class="flex place-items-center">
+
+        
+
+  <span class="text-emerald-400 w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" fill="currentColor"></path>
+    <path d="M18.058 8.53645L17.058 7.92286C16.0553 7.30762 15.554 7 15 7C14.446 7 13.9447 7.30762 12.942 7.92286L11.942 8.53645C10.9935 9.11848 10.5192 9.40949 10.2596 9.87838C10 10.3473 10 10.9129 10 12.0442V17.9094C10 19.8377 10 20.8019 10.5858 21.4009C11.1716 22 12.1144 22 14 22H16C17.8856 22 18.8284 22 19.4142 21.4009C20 20.8019 20 19.8377 20 17.9094V12.0442C20 10.9129 20 10.3473 19.7404 9.87838C19.4808 9.40949 19.0065 9.11848 18.058 8.53645Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14 7.10809C13.3612 6.4951 12.9791 6.17285 12.4974 6.05178C11.9374 5.91102 11.3491 6.06888 10.1725 6.3846L8.99908 6.69947C7.88602 6.99814 7.32949 7.14748 6.94287 7.5163C6.55624 7.88513 6.40642 8.40961 6.10679 9.45857L4.55327 14.8971C4.0425 16.6852 3.78712 17.5792 4.22063 18.2836C4.59336 18.8892 6.0835 19.6339 7.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M14.4947 10C15.336 9.44058 16.0828 8.54291 16.5468 7.42653C17.5048 5.12162 16.8944 2.75724 15.1836 2.14554C13.4727 1.53383 11.3091 2.90644 10.3512 5.21135C10.191 5.59667 10.0747 5.98366 10 6.36383" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+
+  </span>
+
+
+
+        <span class="ml-2 text-zinc-400">Canvas, JavaScript</span>
+
+      </div>
+
+    </div>
+
+    <p class="m-0 text-base"> What is the Canvas API? The Canvas API, or the ‘HTML5 Canvas’, allows for the creation of dynamic, interactive... </p>
+
+    <span class="text-emerald-400 absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 12.5523 20.5523 13 20 13L3.99998 13C3.4477 13 2.99998 12.5523 2.99998 12C2.99998 11.4477 3.4477 11 3.99998 11L20 11C20.5523 11 21 11.4477 21 12Z" fill="currentColor"></path>
+    <path d="M18.9721 12C18.8788 11.8452 18.6832 11.5671 18.4694 11.3251C18.0436 10.8432 17.4569 10.2928 16.8444 9.76105C16.2369 9.23357 15.6264 8.74365 15.166 8.38437C14.9364 8.20515 14.5401 7.90576 14.4069 7.80521C13.9623 7.47768 13.8673 6.85173 14.1948 6.40706C14.5223 5.96236 15.1483 5.86736 15.593 6.19487L15.5967 6.19767C15.7411 6.30672 16.1597 6.62291 16.3965 6.80767C16.8736 7.18002 17.5131 7.69303 18.1556 8.25084C18.7931 8.80434 19.4564 9.4216 19.9681 10.0008C20.223 10.2892 20.4614 10.5918 20.6416 10.8906C20.8052 11.162 21 11.5568 21 12C21 12.4431 20.8052 12.838 20.6416 13.1094C20.4614 13.4082 20.223 13.7108 19.9681 13.9992C19.4564 14.5784 18.7931 15.1957 18.1556 15.7492C17.5131 16.307 16.8736 16.82 16.3965 17.1923C16.1597 17.3771 15.7414 17.6931 15.597 17.8021L15.593 17.8051C15.1483 18.1326 14.5223 18.0376 14.1948 17.5929C13.8673 17.1483 13.9623 16.5223 14.4069 16.1948C14.5401 16.0942 14.9364 15.7948 15.166 15.6156C15.6264 15.2564 16.2369 14.7664 16.8444 14.2389C17.4569 13.7072 18.0436 13.1568 18.4694 12.6749C18.6832 12.4329 18.8788 12.1548 18.9721 12Z" fill="currentColor"></path>
+</svg>
+
+    </span>
+
+  </article>
+
+
+
+    
+
+  </div>
+
+
+
+
+  
+
+  
+
+</div>
+
+
+    </div>
+
+  </div>
+
+  
+
+<footer class="text-center p-5 border-t-2 border-zinc-600">
+
+  <span>© 2025 David Matthew. This is an <strong>AI-Free</strong> website.</span>
+
+  <div class="flex gap-2 justify-center mt-3">
+
+    <a href="https://github.com/davidmatthew-ie" target="_blank">
+
+      
+
+  <span class="w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M2 17.0234C3.63025 20.416 6.29407 21.6289 9.5 20.7444" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M9.99741 22.0234V18.5955C10.0002 17.5234 10.5002 16.5234 10.5002 16.5234C6.91613 15.3634 5 13.0234 5 10.0234C5 8.02344 5.5 7.02344 6.2871 6.05653C5.50019 4.02344 6.50019 2.02344 6.50019 2.02344C8.00019 2.02344 9.35877 2.55722 10.5 3.52344C12.0892 2.72882 14.9108 2.72882 16.5 3.52344C17.6412 2.55722 19 2.02344 20.5 2.02344C20.5 2.02344 21.5 4.02344 20.7131 6.05653C21.5002 7.02344 22.0002 8.02344 22.0002 10.0234C22.0002 13.0234 20.0841 15.3634 16.5 16.5234C16.5 16.5234 17 17.5234 17.0028 18.5955V22.0234" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+    </a>
+
+    <a href="https://open.spotify.com/artist/2CVCluSD7hTfhhJCkm0C3x" target="_blank">
+
+      
+
+  <span class="w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></circle>
+    <path d="M7.5 12.0685C8.59944 11.6998 9.77639 11.5 11 11.5C13.0238 11.5 14.9199 12.0465 16.5488 13M18 10C16.1509 8.7383 13.9122 8 11.5 8C9.90307 8 8.38216 8.32358 7 8.90839M15.129 16C13.8927 15.3609 12.4894 15 11.0018 15C10.1819 15 9.38762 15.1096 8.63281 15.315" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+    </a>
+
+    <a href="https://www.goodreads.com/user/show/66129526-david-matthew" target="_blank">
+
+      
+
+  <span class="w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M16.6127 16.0846C13.9796 17.5677 12.4773 20.6409 12 21.5V8C12.4145 7.25396 13.602 5.11646 15.6317 3.66368C16.4868 3.05167 16.9143 2.74566 17.4572 3.02468C18 3.30371 18 3.91963 18 5.15146V13.9914C18 14.6568 18 14.9895 17.8634 15.2233C17.7267 15.4571 17.3554 15.6663 16.6127 16.0846L16.6127 16.0846Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M12 7.80556C11.3131 7.08403 9.32175 5.3704 5.98056 4.76958C4.2879 4.4652 3.44157 4.31301 2.72078 4.89633C2 5.47965 2 6.42688 2 8.32133V15.1297C2 16.8619 2 17.728 2.4626 18.2687C2.9252 18.8095 3.94365 18.9926 5.98056 19.3589C7.79633 19.6854 9.21344 20.2057 10.2392 20.7285C11.2484 21.2428 11.753 21.5 12 21.5C12.247 21.5 12.7516 21.2428 13.7608 20.7285C14.7866 20.2057 16.2037 19.6854 18.0194 19.3589C20.0564 18.9926 21.0748 18.8095 21.5374 18.2687C22 17.728 22 16.8619 22 15.1297V8.32133C22 6.42688 22 5.47965 21.2792 4.89633C20.5584 4.31301 19 4.76958 18 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+    </a>
+
+    <a href="https://www.linkedin.com/in/david-matthew/" target="_blank">
+
+      
+
+  <span class="w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M7 10V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11 13V17M11 13C11 11.3431 12.3431 10 14 10C15.6569 10 17 11.3431 17 13V17M11 13V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M7.00801 7L6.99902 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+    </a>
+
+    <a href="https://www.instagram.com/davidmatthew_ie/" target="_blank">
+
+      
+
+  <span class="w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+    <path d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z" stroke="currentColor" stroke-width="1.5"></path>
+    <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+    </a>
+
+    <a href="https://bsky.app/profile/davidmatthew-ie.bsky.social" target="_blank">
+
+      
+
+  <span class="w-6 min-w-6 inline-block">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+    <path d="M12 11.4963C11.8936 11.2963 7.45492 3 3.50417 3C1.33647 3 2.00456 8 2.50443 10.5C2.70653 11.5108 3.50417 14.5 8.003 14C8.003 14 4.00404 14.5 4.00404 17C4.00404 18.5 6.50339 21 8.50287 21C10.4606 21 11.9391 16.6859 12 16.5058C12.0609 16.6859 13.5394 21 15.4971 21C17.4966 21 19.996 18.5 19.996 17C19.996 14.5 15.997 14 15.997 14C20.4958 14.5 21.2935 11.5108 21.4956 10.5C21.9954 8 22.6635 3 20.4958 3C16.5451 3 12.1064 11.2963 12 11.4963Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+</svg>
+
+  </span>
+
+
+
+    </a>
+
+  </div>
+  
+</footer>
+
+
+  <script type="module">
+  /**
+ * Functionality for the navbar-toggle animations.
+ */
+
+let navToggle = document.getElementById('nav-toggle');
+let menuIsHidden = true;
+
+navToggle.addEventListener('click', function() {
+
+  let menu = document.getElementById('mobile-menu');
+  let navbarToggler = document.getElementById('nav-toggle');
+  let bar1 = document.querySelector('#nav-toggle div:nth-child(1)');
+  let bar2 = document.querySelector('#nav-toggle div:nth-child(2)');
+  let bar3 = document.querySelector('#nav-toggle div:nth-child(3)');
+
+  if (menuIsHidden) {
+    menu.classList.remove('-translate-x-full');
+    menu.classList.add('translate-x-0');
+    navbarToggler.style.transform = 'rotate(360deg)';
+    bar1.style.transform = 'translateY(16px) rotate(-45deg)';
+    bar2.style.opacity = '0';
+    bar3.style.transform = 'translateY(-16px) rotate(45deg)';
+  } else {
+    menu.classList.remove('translate-x-0');
+    menu.classList.add('-translate-x-full');
+    navbarToggler.style.transform = 'rotate(0deg)';
+    bar1.style.transform = 'translateY(0) rotate(0deg)';
+    bar2.style.opacity = '1';
+    bar3.style.transform = 'translateY(0) rotate(0deg)';
+  }
+
+  menuIsHidden = !menuIsHidden;
+});
+
+  /**
+ * Create the dynamic sidebar containing internal page navigation links.
+ */
+function pageNav() {
+
+  // Get the main page heading and page nav area.
+  const pageHeading = document.querySelector('h1');
+  const pageNav = document.getElementById('page-nav');
+
+  // Create the required elements.
+  const list = document.createElement('ul');
+  const listHeading = document.createElement('h4');
+  const listHeadingLink = document.createElement('a');
+
+  // Create a link to the main page heading.
+  pageHeading.id = pageHeading.innerText.toLowerCase();
+  listHeadingLink.href = `#${pageHeading.id}`;
+
+  // Add styling and text.
+  pageNav.classList.add('text-zinc-300');
+  list.classList.add('ml-1', 'my-0', 'px-0', 'list-none', 'leading-none');
+  listHeading.classList.add('text-xl', 'mt-0', 'mb-1');
+  listHeadingLink.classList.add('font-bold', 'no-underline', 'text-zinc-300');
+  listHeadingLink.innerText = 'Contents';
+  
+  // Append the elements.
+  listHeading.appendChild(listHeadingLink);
+  pageNav.appendChild(listHeading);
+  pageNav.appendChild(list);
+  
+  // Get all the h2 and h3 headings.
+  const subheadings = document.querySelectorAll('h2, h3');
+
+  // For each heading...
+  subheadings.forEach((heading) => {
+
+    // Run for all the h2 and h3 headings that haven't opted out.
+    if (heading.dataset.pageNav != 'false') {
+
+      // Create a list item and link.
+      const listItem = document.createElement('li');
+      const link = document.createElement('a');
+
+      // Apply an id to the heading if one doesn't already exist.
+      if (!heading.hasAttribute('id')) {
+        heading.id = heading.innerText.replace(/\s+/g, '-').toLowerCase();
+      }
+
+      // Create the internal link to the heading and style it.
+      link.href = `#${heading.id}`;
+      link.classList.add('no-underline', 'font-normal', 'text-inherit', 'visited:text-inherit')
+
+      // Get the heading text and style it appropriately.
+      link.innerText = heading.innerText;
+      listItem.classList.add('my-0', 'pb-1', 'text-lg', 'border-l-2', 'border-zinc-600');
+      if (heading.tagName.toLowerCase() === 'h2') {
+        listItem.classList.add('pl-3');
+      } else {
+        listItem.classList.add('pl-5', 'text-base', 'text-zinc-400');
+      }
+
+      // Append the elements.
+      listItem.appendChild(link);
+      list.appendChild(listItem);
+    }
+  });
+}
+
+
+  /**
+ * Alter the top menu bar and logo on scroll.
+ */
+let topBar = document.getElementById('top-bar');
+let logoLink = document.querySelector('#top-bar a');
+
+window.addEventListener('scroll', () => {
+
+  let thresholdReached = document.documentElement.scrollTop > 500 ? true : false;
+
+  if (thresholdReached) {
+    topBar.classList.add('py-3');
+    logoLink.classList.remove('w-16', 'h-16', 'p-4');
+    logoLink.classList.add('w-12', 'h-12', 'p-3');
+  } else {
+    topBar.classList.remove('py-3');
+    logoLink.classList.remove('w-12', 'h-12', 'p-3');
+    logoLink.classList.add('w-16', 'h-16', 'p-4');
+  }
+});
+
+  /**
+ * Control the width of the progress bar at the top of the page on scroll.
+ */
+function scrollProgress() {
+
+  window.addEventListener('scroll', () => {
+
+    let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    let percentScrolled = (scrollTop / scrollHeight) * 100;
+
+    document.getElementById("progress").style.width = `${percentScrolled}%`;
+  });
+}
+
+  document.addEventListener('DOMContentLoaded', () => {
+  // Enable scroll progress functioanlity if the element is present.
+  if (document.getElementById('progress')) scrollProgress();
+
+  // Only add page navigation if the element exists and there are h2 headings.
+  if (document.getElementById('page-nav') && document.querySelectorAll('h2').length > 0) pageNav();
+});
+
+</script>
+
+</body>
+
+</html>

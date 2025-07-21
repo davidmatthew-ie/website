@@ -1,0 +1,17 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tag/{{ tag | slugify }}/
+eleventyExcludeFromCollections: true
+custom: true
+---
+
+<h1 class="after:block after:mt-6 after:h-2 after:w-16 after:bg-purple-500 animate-fade-in-right">Tagged “{{ tag }}”</h1>
+
+{% set post_list = collections[tag] %}
+
+{% from 'macros/posts.njk' import posts %}
+
+{{ posts('h2', post_list, true) }}

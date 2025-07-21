@@ -1,0 +1,29 @@
+---
+layout: layouts/body.html
+---
+
+<div class="col-span-4 xl:px-20">
+
+  {% if not custom %}
+
+    <h1 class="after:block after:mt-6 after:h-1.5 after:w-12 after:bg-purple-500 sm:after:h-2 sm:after:w-20 animate-fade-in-right">
+  
+      {{ title }}
+
+    </h1>
+
+    <div class="animate-fade-in-up">
+
+      {{ content | safe }}
+
+    </div>
+
+  {% else %}
+
+    {{ content | safe }}
+
+  {% endif %}
+
+  
+
+</div>

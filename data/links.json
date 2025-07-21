@@ -1,0 +1,58 @@
+[
+  {
+    "text": "Home",
+    "url": "/",
+    "icon": "home-11-duotone-rounded",
+    "iconColour": "text-sky-400",
+    "accentColour": "bg-sky-400",
+    "newTab": false
+  },
+  {
+    "text": "About Me",
+    "url": "/about/",
+    "icon": "information-circle-twotone-rounded",
+    "iconColour": "text-cyan-400",
+    "accentColour": "bg-cyan-400",
+    "newTab": false
+  },
+  {
+    "text": "Book",
+    "url": "/generative-art-javascript-svg/",
+    "icon": "book-02-twotone-rounded",
+    "iconColour": "text-teal-400",
+    "accentColour": "bg-teal-400",
+    "newTab": false
+  },
+  {
+    "text": "Blog",
+    "url": "/blog/",
+    "icon": "news-01-twotone-rounded",
+    "iconColour": "text-emerald-400",
+    "accentColour": "bg-emerald-400",
+    "newTab": false
+  },
+  {
+    "text": "Code",
+    "url": "https://github.com/davidmatthew-ie",
+    "icon": "source-code-twotone-rounded",
+    "iconColour": "text-green-400",
+    "accentColour": "bg-green-400",
+    "newTab": false
+  },
+  {
+    "text": "Music",
+    "url": "https://open.spotify.com/artist/2CVCluSD7hTfhhJCkm0C3x",
+    "icon": "playlist-03-twotone-rounded",
+    "iconColour": "text-lime-400",
+    "accentColour": "bg-lime-400",
+    "newTab": true
+  },
+  {
+    "text": "Contact",
+    "url": "mailto:davidmatthew.ie@gmail.com",
+    "icon": "mail-at-sign-01-twotone-rounded",
+    "iconColour": "text-yellow-400",
+    "accentColour": "bg-yellow-400",
+    "newTab": false
+  }
+]

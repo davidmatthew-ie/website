@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "0.0.1",
-  "description": "The code for my new website (from WordPress to Eleventy).",
+  "description": "The code for my new 11ty-based website (previously WordPress).",
   "scripts": {
     "clean": "rm -r dist",
     "start": "npm run 11ty-serve & npm run tw-watch",
@@ -29,5 +29,9 @@
     "@tailwindcss/cli": "^4.1.3",
     "tailwindcss": "^4.1.3",
     "terser": "^5.39.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
+    "posthog-js": "^1.257.1"
   }
 }
