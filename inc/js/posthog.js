@@ -8,5 +8,5 @@
 posthog.init('phc_b5jnQjsNIbDKmIDhZoA4skCh7E645E8AAdBp6U8TAWQ', {
   api_host:'https://eu.i.posthog.com', 
   defaults: '2025-05-24',
-  persistence: 'memory'
+  persistence: 'localStorage'
 });
