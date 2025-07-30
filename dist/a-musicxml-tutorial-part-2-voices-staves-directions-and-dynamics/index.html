@@ -1,13 +1,21 @@
 <!doctype html>
-<html class="scroll-smooth">
+
+<html lang="en" class="scroll-smooth">
 
 
 
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="generator" content="Eleventy v3.0.0">
+
+  <meta name="description" content="">
+
   <link href="/css/index.css" rel="stylesheet">
+
   <script>
   /**
  * Cookieless tracking with PostHog web analytics.
@@ -22,7 +30,9 @@ posthog.init('phc_b5jnQjsNIbDKmIDhZoA4skCh7E645E8AAdBp6U8TAWQ', {
   persistence: 'localStorage'
 });
 </script>
+
   <title>A MusicXML Tutorial, Part 2 - Voices, Staves, Directions and Dynamics</title>
+
 </head>
 
 
@@ -604,17 +614,13 @@ posthog.init('phc_b5jnQjsNIbDKmIDhZoA4skCh7E645E8AAdBp6U8TAWQ', {
 <p>Intended audience: web developers or other coders with an interest in music and/or developing musical applications.</p>
 <h2>What We'll Be Creating</h2>
 <p>To quickly recap on our <a href="/a-musicxml-tutorial-part-1-musical-markup-for-the-web/#result">first finished example</a>, we created a two-bar cadence in E minor, using just the treble clef (i.e. the right hand stave). Taking that as our starting point, we'll work our way towards the following result:</p>
-<p><img src="images/musicxml-tutorial-2-result.svg" alt="Musicxml tutorial 2 result"></p>
+<img src="../../media/2025/musicxml-tutorial-2-result.svg" alt="Musicxml tutorial 2 result" style="max-width: 500px">
 <h2>Ditching the DOM</h2>
 <p>In the first example I did something a little cheeky - I embedded the MusicXML directly into a <code>&lt;div&gt;</code> and referenced it from there. For little snippets we can often get away with this, but it's prone to bugs and not recommended. For example, MusicXML has its own <code>&lt;p&gt;</code> element which refers to the <em>piano</em> dynamic marking, and this directly conflicts with HTML's own <code>&lt;p&gt;</code> element for paragraphs. When a browser picks up a <code>&lt;p&gt;</code> element, it's only going to get interpreted one way (i.e. as HTML, not XML), and this will quickly break any scores with that instruction.</p>
 <p>We have a couple of options. We can write the MusicXML markup in either:</p>
 <ol>
-<li>
-<p>A JavaScript string literal.</p>
-</li>
-<li>
-<p>A <code>*.musicxml</code> file.</p>
-</li>
+<li>A JavaScript string literal.</li>
+<li>A <code>*.musicxml</code> file.</li>
 </ol>
 <p>The latter is what I recommend, and what I'll be doing when working on the code locally. For the Codepen examples, I'll take the other approach as it means not having to worry about where to host the <code>*.musicxml</code> files.</p>
 <p>Cutting our MusicXML markup from the DOM (and deleting the containing <code>&lt;div&gt;</code>) and pasting it into either a string literal or dedicated file should leave us with the following starting point for this second tutorial:</p>
@@ -841,7 +847,7 @@ posthog.init('phc_b5jnQjsNIbDKmIDhZoA4skCh7E645E8AAdBp6U8TAWQ', {
 <p>See the Pen by David Matthew (<a href="https://codepen.io/davidmatthew">@davidmatthew</a>) on <a href="https://codepen.io/davidmatthew/pen/azbLGZo">CodePen</a>.</p>
   </iframe>
 <h2>Summary</h2>
-<p>In this tutorial we covered clefs, voices and staves (including the concept of 'backing up' duration within our score) and three different types of musical directions - wedges, words and dynamics. In the next part of the series, we'll delve into ties, beams, a little bit layout, and how MusicXML can accommodate the MIDI standard.</p>
+<p>In this tutorial we covered clefs, voices and staves (including the concept of 'backing up' duration within our score) and three different types of musical directions - wedges, words and dynamics. In the next part of the series, we'll delve into ties, beams, a little bit of layout, and how MusicXML can accommodate the MIDI standard.</p>
 
 
   </div>
