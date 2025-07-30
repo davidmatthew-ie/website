@@ -24,6 +24,10 @@ export default async function (eleventyConfig) {
     return (tags || []).filter(tag => ['x', 'post'].indexOf(tag) === -1);
   });
 
+  eleventyConfig.addPreprocessor('drafts', '*', (data, content) => {
+    if (data.draft) return false;
+  });
+
   eleventyConfig.addShortcode('get_year', () => {
     const date = new Date();
     return date.getFullYear();
