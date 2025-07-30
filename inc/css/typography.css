@@ -37,7 +37,6 @@ p, ul, ol {
   line-height: 1.6;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
-  hyphens: auto;
   overflow-wrap: break-word;
 }
 

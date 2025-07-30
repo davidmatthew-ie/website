@@ -4,7 +4,11 @@
 
   <article class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 {{ modifiers }}">
 
-    <a href="{{ link }}" class="absolute top-0 left-0 h-full w-full z-10"></a>
+    <a href="{{ link }}" class="absolute top-0 left-0 h-full w-full z-10">
+
+      <span class="sr-only">{{ title }}</span>
+
+    </a>
 
     <{{ heading_level | safe }} class="m-0 text-xl">{{ title }}</{{ heading_level | safe }}>
 
