@@ -2,9 +2,10 @@
 title: About Me
 permalink: /about/
 date: 2025-07-16
+description: David Matthew is a composer, web developer, and author of Generative Art with JavaScript and SVG and the associated library SvJs.
 ---
 
-<img src="/img/portrait-bw-2023-12.jpg" class="float-right w-64 p-4 border-2 border-zinc-600" alt="David Matthew">
+<img src="/img/portrait-bw-2023-12.jpg" class="float-right ml-4 mb-4 w-64 max-w-1/2 p-3 border-2 border-zinc-600" alt="David Matthew">
 
 My name is David and I'm a web developer, technical author and musician from Ireland.
 

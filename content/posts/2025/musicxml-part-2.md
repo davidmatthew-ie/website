@@ -16,7 +16,7 @@ Intended audience: web developers or other coders with an interest in music and/
 
 To quickly recap on our [first finished example](/a-musicxml-tutorial-part-1-musical-markup-for-the-web/#result), we created a two-bar cadence in E minor, using just the treble clef (i.e. the right hand stave). Taking that as our starting point, we'll work our way towards the following result:
 
-![Musicxml tutorial 2 result](images/musicxml-tutorial-2-result.svg)
+<img src="../../media/2025/musicxml-tutorial-2-result.svg" alt="Musicxml tutorial 2 result" style="max-width: 500px">
 
 ## Ditching the DOM
 
@@ -25,8 +25,7 @@ In the first example I did something a little cheeky - I embedded the MusicXML d
 We have a couple of options. We can write the MusicXML markup in either:
 
 1. A JavaScript string literal.
-
-3. A `*.musicxml` file.
+2. A `*.musicxml` file.
 
 The latter is what I recommend, and what I'll be doing when working on the code locally. For the Codepen examples, I'll take the other approach as it means not having to worry about where to host the `*.musicxml` files.
 
@@ -324,4 +323,4 @@ And that concludes part two of this MusicXML series. Our score should now look l
 
 ## Summary
 
-In this tutorial we covered clefs, voices and staves (including the concept of 'backing up' duration within our score) and three different types of musical directions - wedges, words and dynamics. In the next part of the series, we'll delve into ties, beams, a little bit layout, and how MusicXML can accommodate the MIDI standard.
+In this tutorial we covered clefs, voices and staves (including the concept of 'backing up' duration within our score) and three different types of musical directions - wedges, words and dynamics. In the next part of the series, we'll delve into ties, beams, a little bit of layout, and how MusicXML can accommodate the MIDI standard.
