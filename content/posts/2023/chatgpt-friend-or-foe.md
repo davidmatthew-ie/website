@@ -2,15 +2,15 @@
 title: "ChatGPT: The Content Creator’s Friend or Foe?"
 permalink: /chatgpt-the-content-creators-friend-or-foe/
 date: 2023-10-27
-updated: 2023-12-01
+updated: 2025-08-05
 tags: ['AI']
 ---
 
 _This article first appeared on [ul.ie](https://www.ul.ie/marketing-and-communications/articles/chatgpt-the-content-creators-friend-or-foe)._
 
-Whether you’re an AI advocate or AI adversary, there’s no doubt that, as a technology, it’s here to stay.
+Whether you’re an AI advocate or AI adversary (or somewhere in-between), there’s little doubt that, as a technology, it’s here to stay.
 
-ChatGPT and other generative AI tools have quickly become a mainstay of the modern workplace, and education is no exception. It is important therefore that we understand the basics of how this technology works so that we can at the very least make informed decisions about its use.
+ChatGPT and other generative AI tools have become a mainstay of the modern workplace and have (for better or worse) also embedded themselves in education. It is important therefore that we understand the basics of how this technology works so that we can at the very least make informed decisions about its use.
 
 ## How It Works
 
@@ -30,7 +30,7 @@ Without all that (human) data, it would be mute as a field mouse.
 
 If it produces well-written content, it is because of the well-written content it was trained on, and this was written by (you guessed it) humans.
 
-This is important to remember, as [ChatGPT won’t tell you (nor is it able to tell you)](https://blogs.library.duke.edu/blog/2023/03/09/chatgpt-and-fake-citations/) how it has sourced its content.
+This is important to remember, as [ChatGPT won’t tell you (nor is it able to tell you)](https://blogs.library.duke.edu/blog/2023/03/09/chatgpt-and-fake-citations/) how it has sourced its content. \[Update: this was true of GPT-3; the situation with more recent models has improved but [erroneous and/or hallucinated sources are still a serious issue](https://faceprep.medium.com/the-citation-illusion-what-chatgpts-fabricated-sources-mean-for-science-2004a9aea1c0).\]
 
 ## Is It ‘Cheating’?
 
@@ -54,4 +54,4 @@ There also exist [real privacy concerns](https://www.makeuseof.com/chatgpt-priv
 - If you do choose to use it, let it complement your work, not compete with it.
 - Always be data aware – don't supply it with confidential information.
 
-<small>\* ChatGPT was trained on 45 terabytes (or 45 million megabytes) worth of data, and Shakespeare’s complete works contain about 3.5 million characters (or bytes).</small>
+<small>\* The GPT-3 model of ChatGPT was trained on 45 terabytes (or 45 million megabytes) worth of data, and Shakespeare’s complete works contain about 3.5 million characters (or bytes).</small>

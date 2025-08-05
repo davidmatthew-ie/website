@@ -8,5 +8,5 @@ draft: true
 
 {% from 'macros/codepen.njk' import codepen %}
 
-In part three of [this series](/tag/musicxml/), we'll cover beams and ties, tweak a little bit of the score layout, and then move on to the MIDI-compatible parts of MusicXML. We'll 
+In part three of [this series](/tag/musicxml/), we'll cover beams and ties, tweak a little bit of the score layout, and then move on to the MIDI-compatible parts of MusicXML.
 
