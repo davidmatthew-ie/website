@@ -1622,9 +1622,11 @@ navToggle.addEventListener('click', function() {
  */
 function pageNav() {
 
-  // Get the main page heading and page nav area.
+  // Get the main page heading and page nav areas.
   const pageHeading = document.querySelector('h1');
-  const pageNav = document.getElementById('page-nav');
+  const pageNavContainer = document.getElementById('page-nav');
+  const pageNavXL = document.getElementById('page-nav-xl');
+  const pageNav = document.querySelector('#page-nav nav');
 
   // Create the required elements.
   const list = document.createElement('ul');
@@ -1636,16 +1638,10 @@ function pageNav() {
   listHeadingLink.href = `#${pageHeading.id}`;
 
   // Add styling and text.
-  pageNav.classList.add('text-zinc-300');
   list.classList.add('ml-1', 'my-0', 'px-0', 'list-none', 'leading-none');
   listHeading.classList.add('text-xl', 'mt-0', 'mb-1');
   listHeadingLink.classList.add('font-bold', 'no-underline', 'text-zinc-300');
   listHeadingLink.innerText = 'Contents';
-  
-  // Append the elements.
-  listHeading.appendChild(listHeadingLink);
-  pageNav.appendChild(listHeading);
-  pageNav.appendChild(list);
   
   // Get all the h2 and h3 headings.
   const subheadings = document.querySelectorAll('h2, h3');
@@ -1678,13 +1674,34 @@ function pageNav() {
         listItem.classList.add('pl-5', 'text-base', 'text-zinc-400');
       }
 
-      // Append the elements.
+      // Append the list items and links.
       listItem.appendChild(link);
       list.appendChild(listItem);
     }
   });
-}
 
+  // Append the list, heading and heading link.
+  listHeading.appendChild(listHeadingLink);
+  pageNav.appendChild(listHeading);
+  pageNav.appendChild(list);
+
+  // Clone all pageNav children and append to pageNavXL.
+  const children = pageNav.childNodes;
+  children.forEach(child => { pageNavXL.appendChild(child.cloneNode(true)) });
+
+  // Functionality for the nav-open button.
+  document.getElementById('nav-open').addEventListener('pointerdown', (event) => {
+    event.stopPropagation();
+    pageNavContainer.classList.remove('translate-x-full');
+    pageNavContainer.classList.add('translate-x-0');
+  });
+
+  // Functionality for the nav-close button.
+  document.getElementById('nav-close').addEventListener('pointerdown', () => {
+    pageNavContainer.classList.remove('translate-x-0');
+    pageNavContainer.classList.add('translate-x-full');
+  });
+}
 
   /**
  * Alter the top menu bar and logo on scroll.
