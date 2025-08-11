@@ -644,7 +644,7 @@ osmd<span class="token punctuation">.</span><span class="token function">load</s
 <h2>Partwise vs Timewise</h2>
 <p>We'll start with the XML and doctype declarations. Here however we're already faced with a decision; namely, whether to represent our score in a timewise fashion (as parts within measures) or in a partwise fashion (as measures within parts).</p>
 <p>What practical difference does this make? Well, if we go with the first approach, <code>&lt;score-timewise&gt;</code> becomes the root element and its individual measures contain parts (i.e. instruments). If we go with the second approach, <code>&lt;score-partwise&gt;</code> becomes the root element and its individual parts contain measures.</p>
-<p>There's no 'correct' choice here; these are simply two different ways to conceptualise a score's hierarchical structure, and the same piece of music could be represented in either partwise or timewise form. We'll stick with the partwise representation, simply because it's the most widespread and well-supported of the two.</p>
+<p>There's no 'correct' choice here; these are simply two different ways to conceptualise a score's hierarchical structure, and the same piece of music could be represented in either partwise or timewise form. We'll stick with the partwise representation, as it's the most widespread and well-supported of the two (to the point that the <a href="https://w3c.github.io/musicxml/version-history/41/">draft specification of version 4.1</a> includes plans to deprecate the timewise option).</p>
 <p>Inside our <code>&lt;div&gt;</code> with the <code>id</code> of <code>score</code>, include the below XML declaration and the MusicXML document type definition (DTD):</p>
 <pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" standalone="no"?></span>
 <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">score-partwise</span> <span class="token name">PUBLIC</span> <span class="token string">"-//Recordare//DTD MusicXML 4.0 Partwise//EN"</span> <span class="token string">"http://www.musicxml.org/dtds/partwise.dtd"</span><span class="token punctuation">></span></span></code></pre>
@@ -858,7 +858,7 @@ osmd<span class="token punctuation">.</span><span class="token function">load</s
 
   
 
-<footer class="text-center p-5 border-t-2 border-zinc-600">
+<footer class="relative z-40 bg-zinc-800 text-center p-5 border-t-2 border-zinc-600">
 
   <span>© 2025 David Matthew. This is an <strong>AI-Free</strong> website.</span>
 
