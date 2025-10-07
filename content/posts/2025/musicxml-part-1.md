@@ -2,13 +2,13 @@
 title: "A MusicXML Tutorial, Part 1 - Musical Markup for the Web"
 permalink: /a-musicxml-tutorial-part-1-musical-markup-for-the-web/
 date: 2025-02-11
-updated: 2025-04-09
-tags: ['x', 'Music', 'MusicXML']
+updated: 2025-10-07
+tags: ['Music', 'MusicXML']
 ---
 
 {% from 'macros/codepen.njk' import codepen %}
 
-In this blog series, we're exploring the musical markup language that is MusicXML and how to get started using it on the web.
+In [this blog series](/tag/musicxml/), we're exploring the musical markup language that is MusicXML and how to get started using it on the web.
 
 Intended audience: web developers or other coders with an interest in music and/or developing musical applications. [Impatient to see the final result? Click here](#summary).
 
@@ -68,7 +68,7 @@ We'll start with the XML and doctype declarations. Here however we're already fa
 
 What practical difference does this make? Well, if we go with the first approach, `<score-timewise>` becomes the root element and its individual measures contain parts (i.e. instruments). If we go with the second approach, `<score-partwise>` becomes the root element and its individual parts contain measures.
 
-There's no 'correct' choice here; these are simply two different ways to conceptualise a score's hierarchical structure, and the same piece of music could be represented in either partwise or timewise form. We'll stick with the partwise representation, simply because it's the most widespread and well-supported of the two.
+There's no 'correct' choice here; these are simply two different ways to conceptualise a score's hierarchical structure, and the same piece of music could be represented in either partwise or timewise form. We'll stick with the partwise representation, as it's the most widespread and well-supported of the two (to the point that the [draft specification of version 4.1](https://w3c.github.io/musicxml/version-history/41/) includes plans to deprecate the timewise option).
 
 Inside our `<div>` with the `id` of `score`, include the below XML declaration and the MusicXML document type definition (DTD):
 
@@ -285,4 +285,4 @@ Setting the `<work>` and `<work-title>` is self-explanatory, hiding the part
 
 ## Summary
 
-We covered quite a lot in this tutorial - the general structure of MusicXML, how to set up parts and measures, define divisions and duration, handle attributes like time and key signatures, and how to create single notes and chords. In the next tutorial we'll expand on the example piece and add in extra staves, voices and musical dynamics.
+We covered quite a lot in this tutorial - the general structure of MusicXML, how to set up parts and measures, define divisions and duration, handle attributes like time and key signatures, and how to create single notes and chords. In [the next tutorial](/a-musicxml-tutorial-part-2-voices-staves-directions-and-dynamics/) we'll expand on the example piece and add in extra staves, voices and musical dynamics.

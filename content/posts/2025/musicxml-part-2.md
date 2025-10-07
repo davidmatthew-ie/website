@@ -2,19 +2,19 @@
 title: "A MusicXML Tutorial, Part 2 - Voices, Staves, Directions and Dynamics"
 permalink: /a-musicxml-tutorial-part-2-voices-staves-directions-and-dynamics/
 date: 2025-03-24
-updated: 2025-04-02
+updated: 2025-10-07
 tags: ['Music', 'MusicXML']
 ---
 
 {% from 'macros/codepen.njk' import codepen %}
 
-In part two of this blog series, we'll expand on our initial example with some musical directions and dynamics, and demonstrate how to work with multiple staves and voices.
+In part two of [this blog series](/tag/musicxml/), we'll expand on our initial example with some musical directions and dynamics, and demonstrate how to work with multiple staves and voices.
 
 Intended audience: web developers or other coders with an interest in music and/or developing musical applications.
 
 ## What We'll Be Creating
 
-To quickly recap on our [first finished example](/a-musicxml-tutorial-part-1-musical-markup-for-the-web/#result), we created a two-bar cadence in E minor, using just the treble clef (i.e. the right hand stave). Taking that as our starting point, we'll work our way towards the following result:
+To quickly recap on our [first finished example](/a-musicxml-tutorial-part-1-musical-markup-for-the-web/#summary), we created a two-bar cadence in E minor, using just the treble clef (i.e. the right hand stave). Taking that as our starting point, we'll work our way towards the following result:
 
 <img src="../../media/2025/musicxml-tutorial-2-result.svg" alt="Musicxml tutorial 2 result" style="max-width: 500px">
 
@@ -287,7 +287,7 @@ The crescendo marking is next, and this direction is classified as a wedge. The 
 </direction>
 ```
 
-If you inspect the score at this point, you should see the _Espressivo_ and _mp_ markings, but where is the crescendo symbol? We can't see it yet because we haven't defined where it should terminate (or 'stop'). We want it to end just shy of the second measure, and for this to happen we need to include another wedge at the very end of the first measure, this time setting its `type` to `stop`.
+If you inspect the score at this point, you should see the _Espressivo_ and _mp_ markings, but where is the crescendo symbol? We can't see it yet because we haven't defined where it should terminate (or 'stop'). We want it to end just shy of the second measure, and for this to happen we need to include another wedge at the very end of the first measure, this time setting its `type` to `stop`.
 
 ```xml
 ...
@@ -323,4 +323,4 @@ And that concludes part two of this MusicXML series. Our score should now look l
 
 ## Summary
 
-In this tutorial we covered clefs, voices and staves (including the concept of 'backing up' duration within our score) and three different types of musical directions - wedges, words and dynamics. In the next part of the series, we'll delve into ties, beams, a little bit of layout, and how MusicXML can accommodate the MIDI standard.
+In this tutorial we covered clefs, voices and staves (including the concept of 'backing up' duration within our score) and three different types of musical directions - wedges, words and dynamics. In [the next part of the series](/a-musicxml-tutorial-part-3-rests-ties-tuplets-beams-barlines/), we'll wrap up our example score and explore barlines, beams, ties, tuplets and rests.
