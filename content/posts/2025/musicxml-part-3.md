@@ -30,8 +30,8 @@ We'll insert a `<rest>` into the base clef, between the `D#` and `F`. At the mom
      <alter>1</alter>
      <octave>3</octave>
    </pitch>
--  <duration>2</duration>
--  <type>quarter</type>
+-  <duration>4</duration>
+-  <type>half</type>
 +  <duration>2</duration>
 +  <type>quarter</type>
    <accidental>sharp</accidental>
