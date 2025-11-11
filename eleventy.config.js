@@ -24,7 +24,7 @@ export default async function (eleventyConfig) {
     return (tags || []).filter(tag => ['x', 'post'].indexOf(tag) === -1);
   });
 
-  eleventyConfig.addPreprocessor('drafts', '*', (data, content) => {
+  eleventyConfig.addPreprocessor('drafts', '*', (data) => {
     if (data.draft) return false;
   });
 
