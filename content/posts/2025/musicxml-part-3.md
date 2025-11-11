@@ -2,7 +2,7 @@
 title: "A MusicXML Tutorial, Part 3 - Rests, Ties, Tuplets, Beams and Barlines"
 permalink: /a-musicxml-tutorial-part-3-rests-ties-tuplets-beams-barlines/
 date: 2025-10-07
-tags: ['x', 'Music', 'MusicXML'] 
+tags: ['Music', 'MusicXML'] 
 ---
 
 {% from 'macros/codepen.njk' import codepen %}

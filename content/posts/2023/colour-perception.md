@@ -3,7 +3,7 @@ title: "Colour Perception, Contrast and Web Accessibility"
 permalink: /colour-perception-contrast-and-web-accessibility/
 date: 2023-11-30
 updated: 2025-06-25
-tags: ['x', 'Accessibility']
+tags: ['Accessibility']
 ---
 
 _This post first appeared on [ul.ie](https://www.ul.ie/marketing-and-communications/articles/colour-and-contrast-matter-in-web-accessibility)._
