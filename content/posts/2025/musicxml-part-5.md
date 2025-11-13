@@ -2,6 +2,7 @@
 title: "MusicXML Tips and Thoughts: An Interview with Karim Ratib"
 permalink: /musicxml-tips-thoughts-karim-ratib/
 date: 2025-11-11
+updated: 2025-11-13
 tags: ['x', 'Music', 'MusicXML']
 ---
 
@@ -23,7 +24,14 @@ I play music almost daily, alone or with friends. I have near-zero creativity - 
 
  **How did you get involved in music coding and MusicXML to begin with? Has it been part of your 9-to-5 or is it more of a passion project?**
 
-Karim: "My personal journey into music coding started less than 10 years ago. I had the opportunity to work on a few paid contracts in that space but it's definitely a passion project."
+Karim: "My professional journey into music coding started less than 10 years ago. I had the opportunity to work on a few paid contracts in that space but it's definitely a passion project.
+
+If we go back further, my *very first* software program was actually a music one: around 1985, my parents bought me a Sinclair ZX Spectrum 48K+, and after learning BASIC, I participated in a local software competition where I coded a guitar program for a classical piece I was learning at the time: <a href="https://imslp.org/wiki/Rujero_y_Paradetas_(Sanz,_Gaspar)" target="_blank">Rujero y Paradetas by Gaspar Sanz</a>. It is a source of major regret that I didn't keep the listing, but this is the first program that I'm really proud of!"
+
+<figure>
+  <img src="../../media/2025/zx-spectrum-48k+.jpg" alt="A classic ZX Spectrum 48K+">
+  <figcaption>The classic ZX Spectrum 48K+</figcaption>
+</figure>
 
 ## MusicXML Challenges
 
