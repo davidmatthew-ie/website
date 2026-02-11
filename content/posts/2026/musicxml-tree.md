@@ -1,13 +1,13 @@
 ---
 title: An Interactive MusicXML Element Tree
 permalink: /musicxml-tree/
-date: 2026-02-06
-tags: ['Music', 'MusicXML']
+date: 2026-02-11
+tags: ['x', 'Music', 'MusicXML']
 ---
 
 When writing my <a href="/tag/musicxml">tutorial series on MusicXML</a>, I found myself regularly clicking around the MusicXML element tree <a href="https://www.w3.org/2021/06/musicxml40/musicxml-reference/element-tree/" target="_blank">on the W3C docs site</a>, dearly wishing I could individually expand and collapse the elements to better explore the spec and get a feel of how everything fit together. Once you're a few levels deep it's easy to lose your conceptual grasp on where you are and how the elements (the many many elements!) relate to each other.
 
-In response I've put together the below prototype, which I'm hopeful will eventually makes its way into the official documentation, which I will be involved in helping re-design and develop. If you've stumbled upon this and are interested in exploring the spec, I hope you find it helpful!
+In response I've put together the below prototype, a version of which I'm hopeful will eventually make its way into the official documentation. If you've stumbled upon this and are interested in exploring the spec, I hope you find it helpful!
 <style>
   #musicxml-tree ul { list-style-type: none }
   #musicxml-tree h2, #musicxml-tree h3 {

@@ -3,7 +3,7 @@ title: "MusicXML Tips and Thoughts: An Interview with Karim Ratib"
 permalink: /musicxml-tips-thoughts-karim-ratib/
 date: 2025-11-11
 updated: 2025-11-13
-tags: ['x', 'Music', 'MusicXML']
+tags: ['Music', 'MusicXML']
 ---
 
 To conclude this series, we have some thoughts and practical tips for MusicXML development from <a href="https://blog.karimratib.me/about/" target="_blank">Karim Ratib</a>.
