@@ -2,16 +2,16 @@
  * Functionality for the navbar-toggle animations.
  */
 
-let navToggle = document.getElementById('nav-toggle');
+const navToggle = document.getElementById('nav-toggle');
+const menu = document.getElementById('mobile-menu');
+const navbarToggler = document.getElementById('nav-toggle');
+const bar1 = document.querySelector('#nav-toggle div:nth-child(1)');
+const bar2 = document.querySelector('#nav-toggle div:nth-child(2)');
+const bar3 = document.querySelector('#nav-toggle div:nth-child(3)');
 let menuIsHidden = true;
 
+// The main event listener to show and hide the menu.
 navToggle.addEventListener('click', function() {
-
-  let menu = document.getElementById('mobile-menu');
-  let navbarToggler = document.getElementById('nav-toggle');
-  let bar1 = document.querySelector('#nav-toggle div:nth-child(1)');
-  let bar2 = document.querySelector('#nav-toggle div:nth-child(2)');
-  let bar3 = document.querySelector('#nav-toggle div:nth-child(3)');
 
   if (menuIsHidden) {
     menu.classList.remove('-translate-x-full');

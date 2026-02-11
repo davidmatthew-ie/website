@@ -3,6 +3,9 @@
  */
 function pageNav() {
 
+  // Mobile page-nav is intially hidden.
+  let isNavOpen = false;
+
   // Get the main page heading and page nav areas.
   const pageHeading = document.querySelector('h1');
   const pageNavContainer = document.getElementById('page-nav');
@@ -71,15 +74,26 @@ function pageNav() {
   children.forEach(child => { pageNavXL.appendChild(child.cloneNode(true)) });
 
   // Functionality for the nav-open button.
-  document.getElementById('nav-open').addEventListener('pointerdown', (event) => {
+  const navOpen = document.getElementById('nav-open');
+  navOpen.addEventListener('click', (event) => {
     event.stopPropagation();
     pageNavContainer.classList.remove('translate-x-full');
     pageNavContainer.classList.add('translate-x-0');
+
+    isNavOpen = true;
   });
 
   // Functionality for the nav-close button.
-  document.getElementById('nav-close').addEventListener('pointerdown', () => {
+  const navClose = document.getElementById('nav-close');
+  navClose.addEventListener('click', () => {
     pageNavContainer.classList.remove('translate-x-0');
     pageNavContainer.classList.add('translate-x-full');
+
+    isNavOpen = false;
+  });
+
+  // Allow dismissing the page nav by clicking anywhere outside it.
+  document.addEventListener('click', () => {
+    if (isNavOpen) navClose.click();
   });
 }

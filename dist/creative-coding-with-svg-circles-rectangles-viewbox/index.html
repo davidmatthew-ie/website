@@ -711,7 +711,7 @@ posthog.init('phc_b5jnQjsNIbDKmIDhZoA4skCh7E645E8AAdBp6U8TAWQ', {
 
 <footer class="relative z-40 bg-zinc-800 text-center p-5 border-t-2 border-zinc-600">
 
-  <span>© 2025 David Matthew. This is an <strong>AI-Free</strong> website.</span>
+  <span>© 2026 David Matthew. This is an <strong>AI-Free</strong> website.</span>
 
   <div class="flex gap-2 justify-center mt-3">
 
@@ -829,16 +829,16 @@ posthog.init('phc_b5jnQjsNIbDKmIDhZoA4skCh7E645E8AAdBp6U8TAWQ', {
  * Functionality for the navbar-toggle animations.
  */
 
-let navToggle = document.getElementById('nav-toggle');
+const navToggle = document.getElementById('nav-toggle');
+const menu = document.getElementById('mobile-menu');
+const navbarToggler = document.getElementById('nav-toggle');
+const bar1 = document.querySelector('#nav-toggle div:nth-child(1)');
+const bar2 = document.querySelector('#nav-toggle div:nth-child(2)');
+const bar3 = document.querySelector('#nav-toggle div:nth-child(3)');
 let menuIsHidden = true;
 
+// The main event listener to show and hide the menu.
 navToggle.addEventListener('click', function() {
-
-  let menu = document.getElementById('mobile-menu');
-  let navbarToggler = document.getElementById('nav-toggle');
-  let bar1 = document.querySelector('#nav-toggle div:nth-child(1)');
-  let bar2 = document.querySelector('#nav-toggle div:nth-child(2)');
-  let bar3 = document.querySelector('#nav-toggle div:nth-child(3)');
 
   if (menuIsHidden) {
     menu.classList.remove('-translate-x-full');
@@ -863,6 +863,9 @@ navToggle.addEventListener('click', function() {
  * Create the dynamic sidebar containing internal page navigation links.
  */
 function pageNav() {
+
+  // Mobile page-nav is intially hidden.
+  let isNavOpen = false;
 
   // Get the main page heading and page nav areas.
   const pageHeading = document.querySelector('h1');
@@ -932,16 +935,27 @@ function pageNav() {
   children.forEach(child => { pageNavXL.appendChild(child.cloneNode(true)) });
 
   // Functionality for the nav-open button.
-  document.getElementById('nav-open').addEventListener('pointerdown', (event) => {
+  const navOpen = document.getElementById('nav-open');
+  navOpen.addEventListener('click', (event) => {
     event.stopPropagation();
     pageNavContainer.classList.remove('translate-x-full');
     pageNavContainer.classList.add('translate-x-0');
+
+    isNavOpen = true;
   });
 
   // Functionality for the nav-close button.
-  document.getElementById('nav-close').addEventListener('pointerdown', () => {
+  const navClose = document.getElementById('nav-close');
+  navClose.addEventListener('click', () => {
     pageNavContainer.classList.remove('translate-x-0');
     pageNavContainer.classList.add('translate-x-full');
+
+    isNavOpen = false;
+  });
+
+  // Allow dismissing the page nav by clicking anywhere outside it.
+  document.addEventListener('click', () => {
+    if (isNavOpen) navClose.click();
   });
 }
 

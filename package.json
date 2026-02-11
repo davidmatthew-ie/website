@@ -6,7 +6,7 @@
     "clean": "rm -r dist",
     "start": "npm run 11ty-serve & npm run tw-watch",
     "build": "npm run 11ty-build && npm run tw-build",
-    "11ty-serve": "npx @11ty/eleventy --serve",
+    "11ty-serve": "npx @11ty/eleventy --serve --quiet",
     "11ty-build": "npx @11ty/eleventy",
     "tw-watch": "npx @tailwindcss/cli -i ./inc/css/index.css -o ./dist/css/index.css --watch",
     "tw-build": "npx @tailwindcss/cli -i ./inc/css/index.css -o ./dist/css/index.css --minify"
@@ -25,12 +25,12 @@
   "type": "module",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "@tailwindcss/cli": "^4.1.17",
-    "tailwindcss": "^4.1.17",
-    "terser": "^5.44.0"
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18",
+    "terser": "^5.46.0"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "posthog-js": "^1.261.6"
+    "posthog-js": "^1.342.1"
   }
 }
