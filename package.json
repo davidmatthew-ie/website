@@ -1,7 +1,7 @@
 {
   "name": "website",
-  "version": "0.0.1",
-  "description": "The code for my new 11ty-based website (previously WordPress).",
+  "version": "1.0.0",
+  "description": "The code for my 11ty-based website (previously WordPress).",
   "scripts": {
     "clean": "rm -r dist",
     "start": "npm run 11ty-serve & npm run tw-watch",
@@ -23,14 +23,12 @@
   },
   "homepage": "https://github.com/davidmatthew-ie/website#readme",
   "type": "module",
-  "devDependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "@tailwindcss/cli": "^4.1.18",
-    "tailwindcss": "^4.1.18",
-    "terser": "^5.46.0"
-  },
   "dependencies": {
+    "@11ty/eleventy": "^3.1.5",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "posthog-js": "^1.342.1"
+    "@tailwindcss/cli": "^4.2.1",
+    "posthog-js": "^1.342.1",
+    "tailwindcss": "^4.2.1",
+    "terser": "^5.46.0"
   }
 }
