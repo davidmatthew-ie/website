@@ -1,0 +1,21 @@
+---
+import Base from './Base.astro';
+import PageTitle from '@components/PageTitle.astro';
+const { frontmatter, title, description } = Astro.props;
+---
+
+<Base title={ title || frontmatter.title } description={ description || frontmatter.description }>
+
+  <div class="col-span-4 xl:px-20">
+
+    <PageTitle title={ title || frontmatter.title } />
+
+    <div class="animate-fade-in-up">
+
+      <slot />
+
+    </div>
+
+  </div>
+
+</Base>

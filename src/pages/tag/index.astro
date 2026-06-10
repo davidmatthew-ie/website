@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import Page from '@layouts/Page.astro';
+import { slugify } from '../../js/utils.js';
+
+const posts = await getCollection('posts');
+const tags = [...new Set(posts.map((post) => post.data.tags).flat())].sort();
+---
+
+<Page title="All Tags" description="All the topics (tags) used in the site">
+
+  <ul>
+    {
+      tags.map(tag => tag !== 'x' && <li><a href={`/tag/${ slugify(tag) }`}>{ tag }</a></li>)
+    }
+ </ul>
+
+</Page>

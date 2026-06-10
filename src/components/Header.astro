@@ -1,0 +1,40 @@
+---
+import Nav from './Nav.astro';
+import Logo from '@assets/img/dm-logo-2025.svg';
+---
+
+<header id="top-bar" class="sticky top-0 left-0 z-20 w-full flex justify-between items-center p-5 bg-zinc-800 border-b-2 border-b-zinc-600 transition-all duration-500 md:px-10 lg:hidden">
+
+  <a href="/" class="block w-16 h-16 p-4 border-2 border-teal-500 rounded-full z-10 hover:bg-zinc-700/30 transition-all duration-500">
+
+    <Logo />
+
+  </a>
+
+  <Nav />
+
+</header>
+
+<script>
+/**
+ * Alter the top menu bar and logo on scroll.
+ */
+const topBar = document.getElementById('top-bar');
+const logoLink = document.querySelector('#top-bar a');
+
+window.addEventListener('scroll', () => {
+
+  const thresholdReached = document.documentElement.scrollTop > 350 ? true : false;
+
+  if (thresholdReached) {
+    topBar?.classList.add('py-3');
+    logoLink?.classList.remove('w-16', 'h-16', 'p-4');
+    logoLink?.classList.add('w-12', 'h-12', 'p-3');
+  } else {
+    topBar?.classList.remove('py-3');
+    logoLink?.classList.remove('w-12', 'h-12', 'p-3');
+    logoLink?.classList.add('w-16', 'h-16', 'p-4');
+  }
+});
+
+</script>

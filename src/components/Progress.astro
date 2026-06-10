@@ -1,0 +1,22 @@
+<div class="fixed top-0 left-0 z-20 w-full h-1 lg:h-1.5">
+
+  <div id="progress" class="w-0 h-full bg-linear-to-r from-purple-500 to-teal-500"></div>
+
+</div>
+
+<script>
+/**
+ * Control the width of the progress bar at the top of the page on scroll.
+ */
+window.addEventListener('scroll', () => {
+
+	const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+
+	const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+	const percentScrolled = (scrollTop / scrollHeight) * 100;
+
+	document.getElementById("progress")!.style.width = `${percentScrolled}%`;
+});
+
+</script>

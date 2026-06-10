@@ -1,0 +1,54 @@
+---
+import Favicon from '@components/Favicon.astro';
+import Header from '@components/Header.astro';
+import SiteNav from '@components/SiteNav.astro';
+import Footer from '@components/Footer.astro';
+import { Font } from 'astro:assets';
+import '../css/index.css';
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en" class="scroll-smooth">
+
+  <head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width" />
+
+    <meta name="generator" content={ Astro.generator } />
+
+    <Favicon />
+
+    <Font cssVariable="--font-source-sans" preload={ true } />
+
+    <meta name="description" content={ description } />
+
+    <script src="../js/posthog.js"></script>
+
+    <title>David Matthew | { title }</title>
+
+  </head>
+
+  <body class="bg-zinc-800 text-zinc-300">
+
+    <div class="min-h-screen lg:grid lg:grid-cols-12 xl:container">
+
+      <Header />
+
+      <SiteNav />
+
+      <div class="px-5 pt-20 pb-40 grid grid-cols-4 md:px-10 lg:col-span-9 xl:px-0 xl:col-span-10">
+
+        <slot />
+
+      </div>
+      
+    </div>
+
+    <Footer />
+
+  </body>
+
+</html>

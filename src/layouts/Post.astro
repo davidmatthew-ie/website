@@ -1,0 +1,31 @@
+---
+import Base from './Base.astro';
+import PageNav from '@components/PageNav.astro';
+import PageTitle from '@components/PageTitle.astro';
+import PostMeta from '@components/PostMeta.astro';
+import Progress from '@components/Progress.astro';
+
+const { frontmatter, headings } = Astro.props;
+---
+
+<Base title={ frontmatter.title } description={ frontmatter.description }>
+
+  <article class="overflow-hidden col-span-4 xl:col-span-3 xl:px-20">
+
+    <PageTitle title={ frontmatter.title } />
+
+    <PostMeta date={ frontmatter.date } tags={ frontmatter.tags } updated={ frontmatter.updated } />
+
+    <div class="animate-fade-in-up">
+
+      <slot />
+
+    </div>
+
+  </article>
+
+  <PageNav headings={ headings } />
+
+  <Progress />
+
+</Base>

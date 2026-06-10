@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import Base from "@layouts/Base.astro";
+import Card from '@components/Card.astro';
+import Button from '@components/Button.astro';
+import ListIcon from '@icons/left-to-right-list-dash-solid-standard.svg';
+import Image from 'astro/components/Image.astro';
+import portrait from '@assets/img/portrait-bw-2023-12.jpg';
+
+// Filter drafts out of production and sort posts by date.
+const posts = (await getCollection('posts'))
+  .filter((post) => !import.meta.env.PROD || post.data.draft !== true)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+// Filter for featured posts.
+const featured = posts.filter((post) => post.data.tags.includes('x'));
+
+// Colours to cycle through, and title and description.
+const colours = ['text-amber-400', 'text-lime-400', 'text-emerald-400', 'text-cyan-400'];
+const title =  'Music, Creative Coding, Web Development';
+const description = 'Website of the Irish musician, technical author and web developer David Matthew.'
+---
+
+<Base title={ title } description={ description }>
+
+  <div class="col-span-4 xl:px-20">
+
+    <div class="flex flex-col lg:flex-row items-center">
+
+      <a href="/about/" class="w-40 h-40 shrink-0 rounded-full p-3 border-4 border-teal-500 mb-4 lg:mb-0 animate-fade-in-down">
+
+        <div class="rounded-full overflow-hidden">
+
+          <Image src={ portrait } alt="David Matthew" class="origin-center transition-transform hover:scale-110" />
+
+        </div>
+
+      </a>
+
+      <div class="animate-fade-in-right text-center lg:text-left lg:ml-5">
+
+        <h1 class="m-0">David Matthew</h1>
+
+        <h2 class="m-0">Music | Creative Coding | Web Development</h2>
+
+      </div>
+
+    </div>
+
+    <h3 class="text-center after:block after:mx-auto after:mt-2 after:h-1 after:w-10 after:bg-purple-500 lg:text-left lg:after:mx-0 animate-fade-in-right">Featured Posts</h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5 my-10">
+
+        { featured.map((post, index) => 
+          <Card
+            colour={ colours[index % colours.length] }
+            content={ post.data.description }
+            date={ post.data.date }
+            delay={ `${index}00ms` }
+            tags={ post.data.tags }
+            title={ post.data.title }
+            url={ `/${ post.id }/` }
+          /> 
+        )}
+
+      </div>
+
+      <div class="animate-fade-in-right">
+
+        <Button link="/blog/" text="See All Posts">
+          <ListIcon class="mr-2" />
+        </Button>
+
+      </div>
+
+    </div>
+  
+</Base>

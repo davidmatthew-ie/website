@@ -1,0 +1,49 @@
+---
+import CalendarIcon from '@icons/calendar-03-duotone-rounded.svg';
+import TagsIcon from '@icons/tags-duotone-rounded.svg';
+import ArrowIcon from '@icons/arrow-right-02-stroke-rounded.svg';
+import { formatDate, formatTags } from '../js/utils';
+const { colour, content, date, tags, title, url, delay } = Astro.props;
+---
+
+<article 
+  class="relative group bg-zinc-700/30 p-6 transition hover:brightness-115 md:p-8 animate-fade-in-up"
+	style={ `animation-delay: ${ delay }` }>
+
+	<a href={ url } class="absolute top-0 left-0 h-full w-full z-10">
+
+		<span class="sr-only">{ title }</span>
+
+	</a>
+	
+	<h2 class="m-0 text-xl">{ title }</h2>
+
+	<div class="flex flex-col justify-center my-3 sm:flex-row sm:justify-normal">
+
+		<div class="flex place-items-center mb-1.5 sm:mb-0">
+
+			<CalendarIcon class={ `${colour} w-6 min-w-6` } />
+
+			<span class="ml-2 mr-3 text-zinc-400">{ formatDate(date) }</span>
+
+		</div>
+
+		<div class="flex place-items-center">
+
+			<TagsIcon class={ `${colour} w-6 min-w-6` } />
+
+			<span class="ml-2 text-zinc-400">{ formatTags(tags) }</span>
+
+		</div>
+
+	</div>
+
+	<p class="m-0 text-base">{ `${content && content.substring(0, 100)}...` }</p>
+
+	<span class={`${colour} absolute bottom-4 right-8 inline-block w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition`}>
+
+		<ArrowIcon />
+
+	</span>
+
+</article>

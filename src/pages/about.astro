@@ -1,0 +1,81 @@
+---
+import Page from '@layouts/Page.astro';
+import Image from 'astro/components/Image.astro';
+import portrait from '@assets/img/portrait-bw-2023-12.jpg';
+const title = 'About Me';
+const description = 'My name is David and I\'m a web developer, technical author and musician from Ireland.';
+---
+
+<Page title={ title } description={ description }>
+
+  <Image src={ portrait } alt="David Matthew" class="float-right ml-4 mb-4 w-64 max-w-1/2 p-3 border-2 border-zinc-600" />
+
+  <p>My name is David and I'm a web developer, technical author and musician from Ireland.</p>
+
+  <p>
+    I'm always working on one project or another. Being creative is not only a core part of my mental 
+    health regimen; it's essentially how I stay sane (in an increasingly dystopic reality). What also helps 
+    is that I am an extremely proud papai of a beautiful Brazilian-Irish boy, and an ever-grateful husband to 
+    a wonderful wife and mulher maravilhosa.
+  </p>
+
+  <h2>Stuff I Do</h2>
+  
+  <p>
+    I have <a href="/generative-art-javascript-svg/">one book to my name</a> so far, on the subject of Generative Art 
+    (<strong>not</strong> the AI kind - if you're curious about my views on AI <a href="/tag/ai/">see here</a>). I've 
+    released a few EPs and an album with the independent Irish label Inner Chapter Music, and am currently working 
+    on a solo piano album.
+  </p>
+
+  <p>
+    On the code side of things, I created the 
+    <a href="https://github.com/davidmatthew-ie/svjs" target="_blank">SvJs JavaScript library</a> 
+    for generative artists (which I use for the examples in my book on the same subject), maintain 
+    <a href="https://profiles.wordpress.org/davidmatthew/#content-plugins" target="_blank">some WordPress plugins</a> 
+    (though I now primarily work in Drupal, Eleventy and Astro - the latter is what this site runs on) and have 
+    more recently been focussed on MusicXML and web audio.
+  </p>
+
+  <h2>Education</h2>
+
+  <table class="max-w-3xl">
+    <thead>
+      <tr>
+        <th>Qualification</th>
+        <th>Institution</th>
+        <th>Year</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MSc Interactive Media</td>
+        <td>University College Cork</td>
+        <td>2017</td>
+        <td>1:1</td>
+      </tr>
+      <tr>
+        <td>MA Philosophy</td>
+        <td>University College Cork</td>
+        <td>2007</td>
+        <td>1:1</td>
+      </tr>
+      <tr>
+        <td>BA Philosophy</td>
+        <td>University College Dublin</td>
+        <td>2006</td>
+        <td>2:1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    My original undergraduate and postgraduate qualifications are in Philosophy - a far-cry from coding! 
+    Or superficially so at least. The discipline of deep, abstract thought and the exercise of logic (logic 
+    being a core subject of philosophy) are invaluable when it comes to computer programming of any kind. 
+    This is especially true now that more and more developers are outsourcing their thinking to statistical
+    text extruding machines (otherwise known as Generative AI) which over time can only lead to cognitive decline.
+  </p>
+
+</Page>

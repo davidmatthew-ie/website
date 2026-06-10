@@ -1,3 +1,3 @@
-# My Website
+# Personal Website
 
-The code for my new website, moving from WordPress to Eleventy.
+This is the repository my Astro-based website [davidmatthew.ie](https://davidmatthew.ie).

@@ -1,0 +1,104 @@
+---
+import HomeIcon from '@icons/home-09-duotone-rounded.svg';
+import AboutIcon from '@icons/information-circle-twotone-rounded.svg';
+import BookIcon from '@icons/book-02-twotone-rounded.svg';
+import BlogIcon from '@icons/news-twotone-rounded.svg';
+import CodeIcon from '@icons/source-code-twotone-rounded.svg';
+import MusicIcon from '@icons/playlist-03-twotone-rounded.svg';
+import ContactIcon from '@icons/mail-at-sign-01-twotone-rounded.svg';
+
+const linkClasses = 'flex items-center no-underline font-medium';
+const spanClasses = 'ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:{{ link.accentColour }} group-hover:after:w-6';
+---
+
+<nav class="flex mt-14 lg:mt-0 lg:fixed lg:h-screen lg:items-center">
+
+  <ul class="list-none p-0 text-xl md:text-2xl">
+
+    <li class="my-5 group">
+
+      <a class={ linkClasses } href="/">
+
+        <HomeIcon class="text-sky-400" width="32" height="32" />
+
+        <span class={ `${spanClasses} after:bg-sky-400` }>HOME</span>
+
+      </a>
+
+    </li>
+
+    <li class="my-5 group">
+
+      <a class={ linkClasses } href="/about/">
+
+        <AboutIcon class="text-cyan-400" width="32" height="32" />
+
+        <span class={ `${spanClasses} after:bg-cyan-400` }>ABOUT ME</span>
+
+      </a>
+
+    </li>
+
+    <li class="my-5 group">
+
+      <a class={ linkClasses } href="/generative-art-javascript-svg/">
+
+        <BookIcon class="text-teal-400" width="32" height="32" />
+
+        <span class={ `${spanClasses} after:bg-teal-400` }>BOOK</span>
+
+      </a>
+
+    </li>
+
+    <li class="my-5 group">
+
+      <a class={ linkClasses } href="/blog/">
+
+        <BlogIcon class="text-emerald-400" width="32" height="32"  />
+
+        <span class={ `${spanClasses} after:bg-emerald-400` }>BLOG</span>
+
+      </a>
+
+    </li>
+
+    <li class="my-5 group">
+
+      <a class={ linkClasses } href="https://github.com/davidmatthew-ie">
+
+        <CodeIcon class="text-green-400" width="32" height="32" />
+
+        <span class={ `${spanClasses} after:bg-green-400` }>CODE</span>
+
+      </a>
+
+    </li>
+
+    <li class="my-5 group">
+
+      <a class={ linkClasses } href="https://open.spotify.com/artist/2CVCluSD7hTfhhJCkm0C3x" target="_blank">
+
+        <MusicIcon class="text-lime-400" width="32" height="32" />
+
+        <span class={ `${spanClasses} after:bg-lime-400` }>MUSIC</span>
+
+      </a>
+
+    </li>
+
+    <li class="my-5 group">
+
+      <a class={ linkClasses } href="mailto:davidmatthew.ie@gmail.com">
+
+        <ContactIcon class="text-yellow-400" width="32" height="32"  />
+
+        <span class={ `${spanClasses} after:bg-yellow-400` }>CONTACT</span>
+
+      </a>
+
+    </li>
+
+  </ul>
+
+</nav>

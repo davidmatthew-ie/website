@@ -1,0 +1,51 @@
+---
+import CalendarIcon from '@icons/calendar-03-duotone-rounded.svg';
+import TagsIcon from '@icons/tags-duotone-rounded.svg';
+import { formatDate, slugify } from '../js/utils';
+
+const { date, tags, updated } = Astro.props;
+---
+
+<div class="flex items-center mb-4 animate-fade-in-left" style="animation-delay: 100ms; animation-fill-mode: both;">
+
+	<span class="inline-block">
+
+		<CalendarIcon class="w-6 min-w-6" />
+
+	</span>
+
+	<span class="ml-2 mr-3 text-zinc-400">
+
+		Published { formatDate(date) }
+
+		{ updated && `(Updated ${ formatDate(updated) })` }
+
+	</span>
+
+</div>
+
+<div class="flex items-center animate-fade-in-left" style="animation-delay: 175ms; animation-fill-mode: both;">
+
+	<span class="inline-block">
+
+		<TagsIcon class="w-6 min-w-6" />
+
+	</span>
+
+	<span class="ml-2 text-zinc-400">
+
+		{
+			tags.map((tag : string, index : number) => {
+				if (tag !== 'x') {
+					return (
+						<>
+							<a href={ `/tag/${slugify(tag)}/` }>{ tag }</a>{ index !== tags.length - 1 && ',' }
+						</>
+					)
+				}
+			})
+		}
+
+	</span>
+
+</div>
