@@ -24,7 +24,8 @@ export default defineConfig({
     }
   },
 
-  site: "https://davidmatthew-ie.github.io/website",
+  site: "https://davidmatthew-ie.github.io",
+  base: "/website",
 
   vite: {
     plugins: [tailwindcss()],
