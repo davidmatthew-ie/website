@@ -2,6 +2,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 import { transformerNotationDiff, transformerNotationHighlight } from '@shikijs/transformers';
 import customTheme from './src/assets/shiki/classic-dark.json';
 import tailwindcss from '@tailwindcss/vite';
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   fonts: [
@@ -28,6 +29,15 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
-  }
-  
+  },
+
+  integrations: [
+    sitemap({
+      filter: (page) =>
+        page !== 'https://davidmatthew.ie/tag/x/' &&
+        page !== 'https://davidmatthew.ie/draft-1/' &&
+        page !== 'https://davidmatthew.ie/draft-2/' &&
+        page !== 'https://davidmatthew.ie/draft-3/'
+    })
+  ]
 });

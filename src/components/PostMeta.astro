@@ -39,7 +39,7 @@ const { date, tags, updated } = Astro.props;
 				if (tag !== 'x') {
 					return (
 						<>
-							<a href={ `/tag/${slugify(tag)}/` }>{ tag }</a>{ index !== tags.length - 1 && ',' }
+							<a href={ `/tag/${slugify(tag)}/` }>{ tag }</a>{ index !== tags.length - 1 && ', ' }
 						</>
 					)
 				}

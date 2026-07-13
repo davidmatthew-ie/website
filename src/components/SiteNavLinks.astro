@@ -6,6 +6,7 @@ import BlogIcon from '@icons/news-twotone-rounded.svg';
 import CodeIcon from '@icons/source-code-twotone-rounded.svg';
 import MusicIcon from '@icons/playlist-03-twotone-rounded.svg';
 import ContactIcon from '@icons/mail-at-sign-01-twotone-rounded.svg';
+import RSSIcon from '@icons/rss-twotone-rounded.svg';
 
 const linkClasses = 'flex items-center no-underline font-medium';
 const spanClasses = 'ml-5 text-zinc-300 group-hover:text-white transition after:transition-all after:block after:h-0.5 after:w-0 after:{{ link.accentColour }} group-hover:after:w-6';
@@ -94,6 +95,18 @@ const spanClasses = 'ml-5 text-zinc-300 group-hover:text-white transition after:
         <ContactIcon class="text-yellow-400" width="32" height="32"  />
 
         <span class={ `${spanClasses} after:bg-yellow-400` }>CONTACT</span>
+
+      </a>
+
+    </li>
+
+    <li class="my-5 group">
+
+      <a class={ linkClasses } href="/rss.xml">
+
+        <RSSIcon class="text-orange-400" width="32" height="32"  />
+
+        <span class={ `${spanClasses} after:bg-orange-400` }>RSS</span>
 
       </a>
 
