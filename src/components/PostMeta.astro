@@ -24,7 +24,7 @@ const { date, tags, updated } = Astro.props;
 
 </div>
 
-<div class="flex items-center animate-fade-in-left" style="animation-delay: 175ms; animation-fill-mode: both;">
+<div class="flex items-center pb-4 animate-fade-in-left" style="animation-delay: 175ms; animation-fill-mode: both;">
 
 	<span class="inline-block">
 
@@ -39,7 +39,10 @@ const { date, tags, updated } = Astro.props;
 				if (tag !== 'x') {
 					return (
 						<>
-							<a href={ `/tag/${slugify(tag)}/` }>{ tag }</a>{ index !== tags.length - 1 && ', ' }
+							<a class="no-underline text-zinc-400 hover:text-zinc-300" href={ `/tag/${slugify(tag)}/` }>
+								{ tag }
+							</a>
+							{ index !== tags.length - 1 && ', ' }
 						</>
 					)
 				}

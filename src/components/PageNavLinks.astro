@@ -10,16 +10,16 @@ const { headings } = Astro.props as { headings: Heading[] };
 
 { headings && headings.length > 0 &&
 
-  <h4 class="text-xl mt-0 mb-1">Contents</h4>
+  <h4 class="text-lg mt-0 mb-1 md:text-xl">Contents</h4>
 
 	<ul class="ml-1 my-0 px-0 list-none leading-none">
 
 		{
 			headings.map((heading) => {
 				if (heading.depth < 4) {
-					const headingLevelClasses = heading.depth === 2 ? 'pl-3' : 'pl-5 text-zinc-400';
-					const listClasses = `text-lg my-0 pb-1 border-l-2 border-zinc-600 ${ headingLevelClasses }`;
-					const linkClasses = 'no-underline font-normal text-inherit visited:text-inherit';
+					const headingLevelClasses = heading.depth === 2 ? 'pl-3 hover:text-white' : 'pl-5 text-zinc-400 hover:text-zinc-300';
+					const listClasses = `text-base my-0 pb-1 border-zinc-600 ${ headingLevelClasses } md:text-lg lg:border-l-2`;
+					const linkClasses = 'no-underline font-normal text-inherit visited:text-inherit transition';
 
 					return (
 						<li class={ listClasses }>

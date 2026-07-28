@@ -83,4 +83,12 @@ hr {
   :target {
     scroll-margin-top: --spacing(16);
   }
+
+  figcaption {
+    font-size: var(--text-lg);
+  }
+
+  table {
+    font-size: var(--text-lg);
+  }
 }

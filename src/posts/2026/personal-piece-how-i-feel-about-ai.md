@@ -1,9 +1,10 @@
 ---
-title: "How I Really Feel About AI"
+title: How I Really Feel About AI
 description: How I feel about AI
-date: 2026-07-09
+date: 2026-07-15
 slug: draft-2
-tags: ['AI']
+tags:
+  - AI
 draft: true
 ---
 

@@ -3,9 +3,9 @@ import Logo from '@assets/img/dm-logo-2025.svg';
 import SiteNavLinks from './SiteNavLinks.astro';
 ---
 
-<div class="hidden h-full px-5 xl:px-0 border-r-2 border-r-zinc-600 lg:flex col-span-3 xl:col-span-2 {{ 'animate-fade-in-left' if page.url == '/' }}">
+<div class="hidden h-full px-5 border-r-2 border-r-zinc-600 lg:flex col-span-3 xl:col-span-2 {{ 'animate-fade-in-left' if page.url == '/' }}">
 
-  <a href="/" class="fixed top-21 block w-16 h-16 p-4 border-2 border-teal-500 rounded-full z-10 hover:bg-zinc-700/30 transition-all duration-500">
+  <a href="/" class="fixed top-21 block w-16 h-16 p-4 border-2 border-teal-500 rounded-full z-10 lg:top-32 hover:bg-zinc-700/30 transition-all duration-500">
 
     <Logo />
 

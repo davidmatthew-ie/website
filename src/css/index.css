@@ -3,6 +3,30 @@
 @import './typography.css' layer(components);
 @utility container { margin: auto }
 @theme {
+  /* Custom breakpoint sizes. */
+  --breakpoint-lg: 68rem;
+  --breakpoint-xl: 86rem;
+  --breakpoint-2xl: 104rem;
+
+  /* Custom text sizing. */
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-2xl: 1.4rem;
+  --text-2xl--line-height: calc(2 / 1.4);
+  --text-3xl: 1.75rem;
+  --text-3xl--line-height: calc(2.25 / 1.75);
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: calc(2.5 / 2.25);
+  --text-5xl: 2.75rem;
+  --text-5xl--line-height: 1;
+  --text-6xl: 3.5rem;
+  --text-6xl--line-height: 1;
+  --text-7xl: 4.25rem;
+  --text-7xl--line-height: 1;
+
+  /* Custom animations. */
   --default-transition-duration: 200ms;
   --animation-duration: 800ms;
   --animation-curve: ease-in-out;
