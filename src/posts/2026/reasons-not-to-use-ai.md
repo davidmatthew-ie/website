@@ -1,28 +1,27 @@
 ---
 title: Good Reasons Not to Use or Rely on Generative AI
 description: An organised collection of (what I consider to be) sensible, defensible reasons not to use or rely on Generative AI.
-slug: draft-1
-date: 2026-07-15
+slug: reasons-not-to-use-or-rely-on-generative-ai
+date: 2026-08-03
 tags:
   - x
   - AI
-draft: true
 ---
 The purpose of this post is to gather as many sensible, defensible reasons against the use of (or reliance on) Generative AI as I can; for myself, really. To weed out what it is exactly that bothers me the most. The world hardly needs another AI opinion piece (destined to be gobbled up by AI itself), but in compiling these points I thought I'd share them in case other like-minded folk found them useful.
 
 It is not a rant against every possible use of AI or a condemnation of those who use it. I occasionally use Mistral and Claude for debugging and help with very specific web searches (in large part due to the <a href="https://link.springer.com/chapter/10.1007/978-3-031-56063-7_4" target="_blank">decline in quality of search engine results</a>), but if you don't (or rarely) use AI and feel like you're being "left behind", perhaps this piece will provide some solace.
 
-## Colossal Cultural Thievery
+## Learning, or Lifting?
 
 It all begins with data gathering; the foundation upon which <abbr title="Large Language Models">LLMs</abbr> and other <abbr title="Generative Pre-trained Transformers">GPTs</abbr> are built (hereafter I'll refer to both of these as Gen AI).
 
 This first stage is rife with ethical concerns. Popular Gen AI models don't just politely scrape what's available from the public domain or the creative commons; the entire internet (and in some cases <a href="https://www.theatlantic.com/technology/2026/06/ai-music-generators-suno-google-udio/687485/" target="_blank">stolen data uploaded to the dark web</a>) is fair game to them. If it's online anywhere, they'll likely find it and feed on it.
 
-If an individual appropriates the artistic or intellectual work of another without permission or attribution, it would be a clear case of copyright violation. When corporations do it however, and do so on a global scale, indiscriminately hoovering up all of humanity's hard-earned cultural treasures, it is exempted by governments and celebrated by proponents as "fair use", even when that use is at its core primed to put the livelihoods of those it has stolen the most from at risk. Writers, artists, musicians and others who have dedicated themselves to their craft, and upon whom these Gen AI models most depend, are pilfered from without a penny's compensation.
+If an individual appropriates the artistic or intellectual work of another without permission or attribution, it would be a clear case of copyright violation. When corporations do it however, and do so on a global scale, indiscriminately hoovering up all of humanity's hard-earned cultural treasures, it is exempted by governments and celebrated by proponents as fair use, even when that use is at its core primed to put the livelihoods of those it has stolen the most from at risk. Writers, artists, musicians and others who have dedicated themselves to their craft, and upon whom these Gen AI models most depend, are pilfered from without a penny's compensation.
 
-It is difficult not to see this as theft, pure and simple.
+It is difficult not to see this as cultural theft on a colossal scale.
 
-### Lifting, Not Learning
+### The Absence of Understanding
 
 There are those who might object that this is simply how Gen AI models *learn*. However, it's more accurate to say that they sample or lift (<a href="" target="_blank">or simply copy</a>) rather than learn from their training material. To give the broad strokes, this training material is first consumed (corresponding to the pre-training phase of a GPT) then translated into statistical probabilities (corresponding to the transforming phase) from which it can later produce output (corresponding to the generative phase). <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/ce208d95d020b023cba9e64031db2584-Abstract-Conference.html" target="_blank">It does not possess the ability to understand</a> this material, and understanding is a critical component of learning.
 
@@ -36,7 +35,7 @@ Previously decommissioned coal and gas power plants have come back online to ser
 
 Ireland (where I live) has been cited as a "cautionary" tale in <a href="https://unu.edu/inweh/collection/environmental-cost-of-AIs-Enrgy-Use-Carbon-water-and-land-footprints" target="_blank">a UN report on the environmental impact of Gen AI</a>. Data centres here consume more electricity than all our domestic urban dwellings combined, and it's perhaps no surprise that <a href="https://www.rte.ie/news/business/2026/0506/1571946-ireland-electricity-prices/" target="_blank">we boast the highest energy prices in Europe</a>. A grim reminder of what happens when demand comically outstrips infrastructure.
 
-AI data centres, i.e. data centres designed specifically to handle the computationally-intensive tasks of training and running Gen AI applications, have become a new scourge on society; from <a href="https://futurism.com/science-energy/county-37-data-centers-schools-conserve-power" target="_blank">competing with schools for power</a>, <a href="https://heated.world/p/data-centers-arent-just-guzzling" target="_blank">poisoning community drinking water</a>, to <a href="https://futurism.com/future-society/family-sell-home-data-center-georgia-power" target="_blank">forcing locals off their land</a> or <a href="https://futurism.com/science-energy/data-center-screeching-noise-house" target="_blank">driving them insane with the noise</a> if they stay, it's safe to say they aren't popular. The good news though is that <a href="https://news.harvard.edu/gazette/story/2026/04/why-are-communities-pushing-back-against-data-centers/" target="_blank">there is growing public pushback</a>.
+AI data centres, i.e. data centres designed specifically to handle the computationally-intensive tasks of training and running Gen AI applications, have become a new scourge on society; from <a href="https://futurism.com/science-energy/county-37-data-centers-schools-conserve-power" target="_blank">competing with schools for power</a>, <a href="https://heated.world/p/data-centers-arent-just-guzzling" target="_blank">poisoning community drinking water</a>, to <a href="https://futurism.com/future-society/family-sell-home-data-center-georgia-power" target="_blank">forcing locals off their land</a> or <a href="https://futurism.com/science-energy/data-center-screeching-noise-house" target="_blank">driving them insane with the noise</a> if they stay, it's safe to say they aren't popular (further evident from the <a href="https://news.harvard.edu/gazette/story/2026/04/why-are-communities-pushing-back-against-data-centers/" target="_blank">growing pushback</a>).
 
 ### But AI Will Fix It!
 
@@ -50,9 +49,9 @@ Human labour powers a far greater portion of the Gen AI pipeline than most peopl
 
 > The magic of machine learning is the grind of data labelling.
 
-But this isn't even the worst part. To ensure frontier Gen AI models aren't racist psychopaths upon their release (they're trained on the entire content of the internet after all), they need to go through an intensive moderation phase. And this involves users pushing these systems to their limits in order to elicit the most depraved responses imaginable (whether in the form of text, images or video). And if the models "take the bait" so to speak, ad hoc filters are put in place to suppress this content when the model is released to the public.
+But this isn't even the worst part. To ensure frontier Gen AI models aren't racist psychopaths upon their release (they're trained on the entire content of the internet after all), they need to go through an intensive moderation phase. And this involves users pushing these systems to their limits to elicit the most depraved responses imaginable (whether in the form of text, images or video). And if the models "take the bait" so to speak, ad hoc filters are put in place to suppress this content when the model is released to the public.
 
-These are how the famously fragile "guardrails" we hear about are created, guardrails that can often be circumvented by persistent users, or can simply fall away following persistent use.
+These are how the famously fragile "guardrails" we hear about are created, guardrails that can often be circumvented by persistent users, or <a href="https://www.forbes.com/sites/lanceeliot/2025/08/29/openai-acknowledges-that-lengthy-conversations-with-chatgpt-and-gpt-5-might-regrettably-escape-ai-guardrails/" target="_blank">can simply fall away following persistent use</a>.
 
 Concrete examples of how content moderators push these models are truly harrowing. In the case of one of Meta's outsourcing clients Covalen, workers training their Llama models were told to "think like paedophiles" seeking out graphic and/or violent CSAM material, and others revealed how they would spend entire shifts pretending to be suicidal.
 
@@ -63,6 +62,14 @@ This particular worker was so impacted by this that they started to self-harm in
 <a href="https://www.thejournal.ie/meta-workers-ireland-6745653-Jul2025/" target="_blank">Source: The Journal Investigates</a>
 
 Other unfortunate workers training Open AI's ChatGPT describe how they were tasked with reviewing text and images describing and depicting the worst forms of human depravity imaginable (acts I'm afraid to even type out, so I'll just link to <a href="https://www.theguardian.com/technology/2023/aug/02/ai-chatbot-training-human-toll-content-moderator-meta-openai" target="_blank">the Guardian's investigation</a>) and how their personal lives literally fell apart afterwards.
+
+## From Sycophancy to Psychosis
+
+During what's called the post-training phase, moderators are tasked with choosing the most optimal outputs for particular responses, and the Gen AI model parameters are then tweaked accordingly. This often involves selecting the answer that would be considered the most 'pleasing' to the end user and that encourages further engagement. In other words, Gen AI models are tuned to be sycophantic (i.e. they gain favour through flattery) and are <a href="https://www.404media.co/microsoft-wants-to-make-people-addicted-to-scout-its-new-ai-assistant-internal-documents-reveal/" target="_blank">intentionally designed to be addictive</a>.
+
+This can, and has, lead to psychological dependence and exacerbation of mental health crises for users of AI chatbots. <a href="https://www.psychologytoday.com/us/blog/urban-survival/202507/the-emerging-problem-of-ai-psychosis" target="_blank">The term "AI Psychosis" has been coined to capture this phenomenon</a>, and has resulted in a steady stream of lawsuits against AI companies. Tragically, in many cases these are filed by the families of <a href="https://www.probiologists.com/article/digital-companions-real-casualties-a-commentary-on-rising-ai-related-mental-health-crises" target="_blank">users lost to suicide</a>.
+
+The anthropomorphising at the heart of interactions with conversational AI chatbots essentially weaponises our empathy. Psychotherapists have warned of these dangers as <a href="https://www.theguardian.com/society/2025/aug/30/therapists-warn-ai-chatbots-mental-health-support" target="_blank">vulnerable individuals increasingly turn to them for emotional support</a>.
 
 ## Cognitive and Creative Decline
 
@@ -122,92 +129,39 @@ Other educators have gone much further and outsourced teaching entirely. In so-c
 
 ## The AI Slopademic
 
-### Supercharged Enshittification
+Also referred to as the <a href="https://redmonk.com/kholterhoff/2026/02/03/ai-slopageddon-and-the-oss-maintainers/" target="_blank">AI Slopageddon</a>, this refers to the phenomenon of AI Slop, i.e. low-effort AI-generated content, flooding the internet. The term AI Slop gained traction as soon as generative AI content began to drown out human-generated content on most social platforms. It is an issue that is supercharging the process <a href="https://web.archive.org/web/20240208152542/https://www.ft.com/content/6fb1602d-a08b-4a8c-bac0-047b7d64aba5" target="_blank">Cory Doctorow christened **Enshittification**</a>, and is so pervasive and proliferating at such a rapid pace that it's effectively <a href="https://www.404media.co/ai-job-loss-research-ignores-how-ai-is-utterly-destroying-the-internet/" target="_blank">destroying the human internet as we know it</a>.
 
-(Writing, Art, Video, Music)  
-Further Enshittification of the Internet
+### Cultural Slop
 
+Human-created content on YouTube is being increasingly sidelined by mass-produced AI-generated videos that can be churned out so quickly and with such little effort that they can more easily exploit the algorithms that govern these platforms in order to 'see what sticks' (so the most successful content is both sloppy *and* sticky). It's particularly worrying when it comes to genres like history, where <a href="https://www.404media.co/ai-generated-boring-history-videos-are-flooding-youtube-and-drowning-out-real-history/" target="_blank">AI-generated content rife with historical inaccuracies are drowning out videos by real historians</a> who take the time to carefully research their source materials in order to accurately portray the past.
 
+In music, the rising tide of AI Slop is overwhelming popular streaming platforms like Spotify and Deezer and robbing what little revenue real musicians get (and often <a href="https://www.404media.co/spotify-publishes-ai-generated-songs-from-dead-artists-without-permission/" target="_blank">robbing their identities too</a>). In addition to musicians being <a href="https://www.theverge.com/entertainment/907111/murphy-campbell-folk-music-ai-copyright" target="_blank">understandably up-in-arms</a> when they are impersonated and stolen from, users are also getting frustrated at finding AI slop slip into their playlists, deceiving them into thinking they're listening to real artists. Some platforms like Deezer are making efforts to label music generated by AI, but Spotify has yet to take similar measures. Sites like <a href="https://sloptracker.org/" target="_blank">sloptracker.org</a> and <a href="https://soullessmusic.com/" target="_blank">soullessmusic.com</a> have stepped in to remedy this, but such efforts, while admirable, feel rather futile when they're not being made by the platforms themselves.
 
-### Workslop
+Amazon is another case in point, where no efforts are being made to label the <a href="https://futurism.com/amazon-kindle-ai-ads" target="_blank">avalanche of AI Slop hitting their marketplace</a> and masquerading as original literature. Authors who take the time to write their own books and develop their own style - think Donna Tartt, who took ten years to pen The Goldfinch - are being indiscriminately copied, while others boast of belching out new books in as little as 45 minutes with AI (the same so-called novelist <a href="https://futurism.com/artificial-intelligence/ai-novelist" target="_blank">claimed to have published two hundred books in a single year</a> using several pseudonyms).
 
-The effect on employment, AI being forced on employees despite it not delivering on its productivity promises. Workers being fired and then re-hired under worse conditions (Klarna, video game artists)
+Adding insult to injury, AI companies, averse to swallowing their own slop, <a href="https://www.404media.co/ai-companies-are-buying-tons-of-old-books-because-theyre-free-of-ai-slop/" target="_blank">seek out older books (pre-2022) guaranteed to be free of it</a>, in and so doing, shred their spines and destroy them. Tragically, this includes rare and antique books.
 
-### Information Integrity
+If this doesn't epitomize the parasitic effect Gen AI has on human culture, I don't know what does; find a host, drain it for all it's worth, and when it gets too sick and slop-infested to support you, hop on to the next host.
+### Work Slop
 
-Hallucinations and Lies  
-Attacks on public libraries and archives, inclusion of fake articles on google scholar because they've been cited so much
+Tech bros and AI boosters are fond of making predictions of mass unemployment due to the generative AI rollout, but when put to the test, even the best Gen AI models <a href="https://www.washingtonpost.com/technology/interactive/2026/ai-jobs-automation/" target="_blank">can only complete a small percentage of real-world assignments</a>. The reality is that AI's impact on most employees is more mundane.
 
-====
+Many workers report being pressured to adopt it without any evidence of its efficacy for their particular role or proof that it will deliver on <a href="https://futurism.com/artificial-intelligence/ai-failing-boost-productivity" target="_blank">its productivity promises</a>, while others report encountering <a href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity" target="_blank">increased instances of "workslop"</a>, i.e. work that has the appearance of rigour and depth but falls apart on closer inspection, ultimately creating more work for colleagues and decreasing job satisfaction.
 
-https://www.404media.co/spotifys-ai-problem-is-so-bad-random-people-are-stepping-in-to-track-the-slop/
+Vibe-coding, i.e. using AI to generate code, is having a similarly detrimental effect on software development, <a href="https://www.ox.security/blog/vibe-coding-security/" target="_blank">increasing security vulnerabilities</a>, <a href="https://www.kunalganglani.com/blog/ai-slopageddon-open-source-crisis" target="_blank">threatening the sustainability of open-source projects</a> (owing to lazy "drive-by" merge requests) and causing <a href="https://www.businessinsider.com/software-engineers-face-an-ai-identity-crisis-vc-partner-says-2026-6"  target="_blank">a crisis of meaning "bordering on depression"</a> among developers who still value the craft of writing code.
 
-**Journal of Business Ethics (2026)**: This paper explores the "AI penalty," where AI-generated content is perceived as less valuable, less culturally significant, and fails to connect with audiences, undermining the meaningfulness of creative work.
-[The Impacts of Generative AI on the Meaningfulness of Creative Work](https://link.springer.com/article/10.1007/s10551-026-06342-4)
+## Information Integrity
 
+Information has never been so abundant, but we've never trusted it less. The proliferation of AI-generated content <a href="https://www.frontiersin.org/journals/political-science/articles/10.3389/fpos.2026.1811974/full" target="_blank">only adds to this problem</a> in an already-polarised online environment, where appeals to emotion and group identity often override any concern for factual accuracy.
 
-“An Endless Stream of AI Slop”: The Growing Burden of AI-Assisted Software Development: https://arxiv.org/html/2603.27249v1
+Bastions of said factual accuracy and public record, such as libraries, museums and encyclopedias are under serious strain and in some cases existential threat as <a href="https://www.404media.co/ai-scraping-bots-are-breaking-open-libraries-archives-and-museums/" target="_blank">AI bots swarm and overwhelm their servers</a> in order to siphon off training data. Wikipedia, once open to using Gen AI, <a href="https://www.theguardian.com/technology/2026/mar/27/wikipedia-bans-ai" target="_blank">has been forced to adopt a no-tolerance policy to AI-generated articles</a> due to editors (a community of volunteers) being inundated with rising incidents of submissions containing hallucinations and other inaccuracies.
 
-[AI Slopageddon: How AI-Generated Code Is Destroying Open Source](https://www.kunalganglani.com/blog/ai-slopageddon-open-source-crisis)
+### Deepfakes and Disinformation
 
-====
+AI-generated deepfakes, i.e. synthetic media depicting events that never occurred, have increased in sophistication to the point where <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1155/hbe2/1833228" target="_blank">the average user of social media is unable to reliably detect them.</a> This is a gift for malicious actors of all kinds, from grifters and governments to cyber-criminals and sexual predators. <a href="https://www.theguardian.com/technology/2026/jul/27/misleading-ai-generated-doctors-public-safety-danger-tiktok" target="_blank">AI-generated doctors</a> dispensing dangerous health advice abound on Tiktok while <a href="https://www.theguardian.com/technology/2026/jan/11/google-ai-overviews-health-guardian-investigation" target="_blank">Google's AI Overviews are often guilty of the same</a>; AI-powered identity fraud <a href="https://www.prnewswire.com/news-releases/ai-generated-identity-fraud-dominates-financial-services-as-confirmed-fraud-rates-rise-across-every-sub-sector-new-au10tix-data-shows-302821547.html" target="_blank">is now the dominant threat facing financial institutions</a>; autocratic and democratic governments alike are getting in on the game and <a href="https://www.technologyreview.com/2023/10/04/1080801/generative-ai-boosting-disinformation-and-propaganda-freedom-house/" target="_blank">using AI to manipulate public opinion and crack down on internet freedom</a>, and to even <a href="https://arxiv.org/html/2405.01859v1" target="_blank">recommend military action</a>; and recent data from the Internet Watch Foundation recorded a staggering <a href="https://fortune.com/2026/04/03/internet-watch-foundation-260-fold-increase-ai-generated-csam/" target="_blank">260-fold increase in AI-generated child sexual abuse material in 2025</a> compared to 2024, as experts insist it's only the tip of the iceberg.
 
+## Wrapping Up
 
+Whew... That was longer than anticipated. And after that last paragraph I'm honestly too exhausted to give a summary. AI could no doubt do a decent job at that (it loves an old summary table), but I draw the line at getting it to write or indeed create anything for me. If you're looking for that <abbr title="Too Long Didn't Read">TLDR</abbr> takeaway, the table of contents will have to do!
 
-
-
-
-## From Sycophancy to Psychosis
-
-Optimising for Engagement and weaponising dependence
-
-## Deepfakes and Disinformation
-
-## Unsorted Material
-
-
-The messaging "Learn AI or get left behind" is equally ubiquitous, whether it takes the form of a LinkedIn post by a self-styled thought leader, or a new icon in the software you use every day that hops and wiggles, clamouring to be clicked. "I'm a new AI-powered feature that will 10x your productivity!" it promises.
-
-But what really gets left behind when we use AI? And are there sensible, defensible reasons to opt out of its use (or not opt-in in the first place)?
-
-Product over Process: AI is all about the final product, and the (much claimed) efficiency gains that come with that are at the expense of the process. Wow, ChatGPT whipped up a first draft in seconds - what a way to supercharge my productivity! Perhaps; perhaps not. Could there be value in staring at the blank page, or the blinking cursor? Could you in fact learn more during the struggle to fill out that first line?
-
-Are you a thought leader or thought enfeebler?
-
-The output can indeed be impressive (especially in a demo scenario), but behind every impressive and seemingly novel output hides an unfathomably massive collection of human input.
-
-
-
-
-Resistance to Generative AI: Investigating the Drivers of Non-Use  
-[https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/961d338d-c058-4fc8-b3e8-3753dc2f171e/content](https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/961d338d-c058-4fc8-b3e8-3753dc2f171e/content)
-
-Ten reasons not to use AI for development and ten routes to more responsible use
-[https://www.ids.ac.uk/opinions/ten-reasons-not-to-use-ai-for-development-and-ten-routes-to-more-responsible-use/](https://www.ids.ac.uk/opinions/ten-reasons-not-to-use-ai-for-development-and-ten-routes-to-more-responsible-use/)
-
-
-
-
-
-Bots are breaking open librarires, archives and museums
-[https://www.404media.co/ai-scraping-bots-are-breaking-open-libraries-archives-and-museums/](https://www.404media.co/ai-scraping-bots-are-breaking-open-libraries-archives-and-museums/)
-
-Recent data from the  Internet Watch Foundation reveals a staggering [380% increase in reports of AI-generated CSAM](https://www.iwf.org.uk/news-media/news/new-ai-child-sexual-abuse-laws-announced-following-iwf-campaign/)  
-[https://blogs.lse.ac.uk/parenting4digitalfuture/2025/06/18/the-intersection-of-ai-and-csam-a-reflection-on-the-uks-online-safety-act/](https://blogs.lse.ac.uk/parenting4digitalfuture/2025/06/18/the-intersection-of-ai-and-csam-a-reflection-on-the-uks-online-safety-act/)
-
-The total number of deepfake videos online in 2023 was 550 percent higher than in 2019. [Deepfake pornography makes up 98 percent of all deepfake videos online](https://www.securityhero.io/state-of-deepfakes/), and 99 percent of the individuals targeted are women.  
-[https://www.unwomen.org/en/articles/faqs/ai-powered-online-abuse-how-ai-is-amplifying-violence-against-women-and-what-can-stop-it](https://www.unwomen.org/en/articles/faqs/ai-powered-online-abuse-how-ai-is-amplifying-violence-against-women-and-what-can-stop-it)
-
-‘Dangerous and alarming’: Google removes some of its AI summaries after users’ health put at risk. [https://www.theguardian.com/technology/2026/jan/11/google-ai-overviews-health-guardian-investigation](https://www.theguardian.com/technology/2026/jan/11/google-ai-overviews-health-guardian-investigation)
-
-
-"The best-performing AI system successfully completed only 2.5 percent of the projects". Can AI do your job? See the results from hundreds of tests.  
-[https://www.washingtonpost.com/technology/interactive/2026/ai-jobs-automation/](https://www.washingtonpost.com/technology/interactive/2026/ai-jobs-automation/)
-
-UN report of AI environmental impact
-https://news.un.org/en/story/2026/06/1167658
-
-
-
-
-
+My parting words: hold on to your humanity. Defend it against attempts to automate your inner life. Don't rely on generative AI.
