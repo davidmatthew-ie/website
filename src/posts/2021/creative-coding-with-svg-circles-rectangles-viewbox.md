@@ -3,7 +3,7 @@ title: "Creative Coding with SVG: Circles, Rectangles and the ViewBox"
 slug: creative-coding-with-svg-circles-rectangles-viewbox
 date: 2021-06-20
 updated: 2025-07-19
-tags: ['JavaScript', 'SVG']
+tags: ['Creative Coding', 'JavaScript', 'SVG']
 description: How to get started coding creatively with Scalable Vector Graphics (SVG) - Circles, Rectangles and the ViewBox.
 ---
 

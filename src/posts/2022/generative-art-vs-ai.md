@@ -2,8 +2,8 @@
 title: "Generative Art vs AI Art Generators"
 slug: generative-art-vs-ai-art-generators
 date: 2022-10-09
-updated: 2023-12-18
-tags: ['AI', 'Generative Art']
+updated: 2026-09-15
+tags: ['AI', 'Creative Coding', 'Generative Art']
 description: Is AI-generated art a kind of generative art? Is it art at all? For what it's worth, here are my thoughts.
 ---
 
@@ -35,7 +35,7 @@ So much for the similarities. As for the differences, these required a little mo
 
 - **Craft**: Generative art requires learning a craft. In this case, the craft of coding as an expressive medium. You don’t learn to code overnight; becoming a competent coder can take years. In contrast, using an AI tool like Midjourney does not require anything analogous to learning a craft. Now, it could be argued that a certain patience and ingenuity is required in order to 'craft' the results one is after, and sure - I'll concede that. But this is also true of clever google searching.
 
-- **Creativity**: The are no doubt many very imaginative and poetically-inspired text prompts responsible for a large swathe of AI artistic output. However, the creativity involved is limited to the lexical domain and is completely detached from the actual artistic process. The latter is very much a ‘black box’ as far as the user is concerned. In contrast, the creativity required of the generative artist is very involved and can often be quite intellectually taxing.
+- **Creativity**: The are no doubt many imaginative text prompts responsible for a large swathe of AI imagery. However, the creativity involved is limited to the lexical domain and is completely detached from the actual artistic process. The latter is very much a ‘black box’ as far as the user is concerned. In contrast, the creativity required of the generative artist is very involved and can often be quite intellectually taxing.
 
 - **Knowledge**: Sometimes with generative art, the results are hard or even impossible to predict (and this is part of the fun). However, you are nonetheless knowledgeable of the underlying process, i.e. the code you’ve pored over to get to this point. With AI art, unless you’re responsible for writing the software itself, there is no real insight into the underlying process; hundreds of thousands of images might have been processed (in many cases [outright stolen](http://artnews.com/art-news/news/signatures-lensa-ai-portraits-1234649633/)) to produce the end result, but you’ll be none the wiser. In fact many of these images may be the culmination of painting techniques perfected over hundreds of years of artistic ingenuity.
 

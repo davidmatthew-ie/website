@@ -2,7 +2,7 @@
 title: "Should I Use p5js or Plain JavaScript (HTML Canvas)?"
 slug: p5js-vs-html-canvas
 date: 2021-08-12
-tags: ["Canvas", "Generative Art", "JavaScript"]
+tags: ["Creative Coding", "Canvas", "Generative Art", "JavaScript"]
 description: The pros and cons of using a popular library like p5js versus plain JavaScript for creative coding.
 ---
 

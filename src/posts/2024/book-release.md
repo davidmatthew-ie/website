@@ -3,7 +3,7 @@ title: "Book Release: Generative Art with JavaScript and SVG"
 slug: book-release-generative-art-with-javascript-and-svg
 date: 2024-04-09
 updated: 2025-06-24
-tags: ['Generative Art', 'JavaScript', 'SVG']
+tags: ['Creative Coding', 'Generative Art', 'JavaScript', 'SVG']
 description: Plug time! Apress have just released my book Generative Art with JavaScript and SVG. Here's a bit about what it's about and who's it for.
 ---
 

@@ -3,7 +3,7 @@ title: "Book: Generative Art with JavaScript and SVG"
 slug: generative-art-javascript-svg
 date: 2024-03-22
 updated: 2025-07-10
-tags: ['x', 'Generative Art', 'JavaScript', 'SVG']
+tags: ['x', 'Creative Coding', 'Generative Art', 'JavaScript', 'SVG']
 description: Here you'll find all the interactive examples accompanying my book Generative Art with JavaScript and SVG (Apress 2024).
 ---
 

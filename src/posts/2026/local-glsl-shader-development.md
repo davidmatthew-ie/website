@@ -2,9 +2,10 @@
 title: How to Create a Dependency-Free Development Environment for GLSL Shaders
 description: A step-by-step guide to setting up your own local dev environment for Shadertoy-esque GLSL sketches, no dependencies needed.
 slug: glsl-shaders-dependency-free-development
-date: 2026-08-26
+date: 2026-09-15
 tags:
   - x
+  - Creative Coding
   - Shaders
   - JavaScript
 ---
