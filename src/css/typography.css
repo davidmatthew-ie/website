@@ -131,7 +131,7 @@ ul ul, ol ul {
 }
 
 code, kbd, samp {
-  font-family: var(--font-mono);
+  font-family: var(--font-fragment-mono);
   font-size: var(--text-sm);
   margin-left: --spacing(0.5);
   margin-right: --spacing(0.5);

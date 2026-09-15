@@ -12,9 +12,15 @@ export default defineConfig({
       provider: fontProviders.fontsource(),
       weights: [400, 500, 700],
       styles: ["normal"]
+    },
+    {
+      name: "Fragment Mono",
+      cssVariable: "--font-fragment-mono",
+      provider: fontProviders.fontsource(),
+      weights: [400],
+      styles: ["normal"]
     }
   ],
-
   markdown: {
     shikiConfig: {
       theme: customTheme,
