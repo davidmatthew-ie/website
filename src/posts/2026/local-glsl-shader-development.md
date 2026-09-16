@@ -24,7 +24,7 @@ There is always the option to revert to using a library once you've grappled wit
 
 ## Setting up a Local Environment
 
-The first thing you'll need is a code editor, which, if you're here, I'll assume you already have. I'd recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> (or <a href="https://vscodium.com/" target="_blank">VS Codium</a>, a version free of Microsoft's tracking/telemetry) as it has a great GLSL extension called <a href="https://marketplace.visualstudio.com/items?itemName=raczzalan.webgl-glsl-editor" target="_blank">WebGL GLSL Editor</a>. This offers a number of useful features for GLSL development, such as general code <a href="https://code.visualstudio.com/docs/editing/intellisense" target="_blank">intellisense</a>, offline documentation and syntax highlighting support for standalone files, script elements and template strings.
+The first thing you'll need is a code editor, which, if you're here, I'll assume you already have. I'd recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> (or <a href="https://vscodium.com/" target="_blank">VS Codium</a>, a version free of Microsoft's tracking/telemetry) as it has a great GLSL extension called <a href="https://marketplace.visualstudio.com/items?itemName=raczzalan.webgl-glsl-editor" target="_blank">WebGL GLSL Editor</a>. This offers a number of useful features for GLSL development, such as general code <a href="https://code.visualstudio.com/docs/editing/intellisense" target="_blank">intellisense</a>, compile-time errors, offline documentation and syntax highlighting support for standalone files, script elements and template strings.
 
 The next thing you'll need is a web server. You could go with the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server extension</a>, or simply install `live-server` on your machine via `npm` (which is what I do):
 
@@ -42,12 +42,12 @@ Here's how I'd recommend you organise your files and folders within your project
     ├── style.css
     └── shaders
         └── 000-starter-template
-            ├── fragment.glsl
+            ├── fragment.fs
             ├── index.html
-            ├── vertex.glsl
+            ├── vertex.vs
 ```
 
-The idea here is to keep things extremely simple. The `000-starter-template` folder can act as a base template that you can copy as you need to, as your collection of sketches grows. You can name these folders however you like but it's important (as we'll see later) to keep the names of the three files `fragment.glsl`, `index.html` and `vertex.glsl` the same.
+The idea here is to keep things extremely simple. The `000-starter-template` folder can act as a base template that you can copy as you need to, as your collection of sketches grows. You can name these folders however you like but it's important (as we'll see later) to keep the names of the three files `fragment.fs`, `index.html` and `vertex.vs` the same.
 
 ## Markup and Styling
 
@@ -93,14 +93,14 @@ This tutorial won't cover any of the complexities of shaders themselves; the foc
 
 The vertex shader handles vertex attribute data, and the only attribute we'll be interested in is the `position` attribute which we'll set up later in our `main.js` file. We'll also be using WebGL 2, so we'll need a version definition at the top of both of our shader files that specifies the corresponding version of GLSL to use (which, to confuse things a little, is version `3.00`).
 
-Here's the content that should go into the `vertex.glsl` file:
+Here's the content that should go into the `vertex.vs` file:
 
 ```glsl
-#version 300 es ->
+#version 300 es
 
 in vec4 position;
 
-void main() -> {
+void main() {
   gl_Position = position;
 }
 ```
@@ -125,7 +125,7 @@ void main() {
 
 ## The Main Function
 
-We'll be loading our shaders asynchronously from their respective `.glsl` files, so the main function in our `main.js` file needs to support this. We'll set it up as an anonymous wrapper function that automatically fires, so we don't have to call it manually by name after defining it:
+We'll be loading our shaders asynchronously from their respective `.vs` and `.fs` files, so the primary function in our `main.js` file needs to support this. We'll set it up as an anonymous wrapper function that automatically fires, so we don't have to call it manually by name after defining it:
 
 ```js
 (async () => {
@@ -164,7 +164,7 @@ We'll create and compile our vertex shader first. We can do this using three Web
 ```js
 // Create and compile the vertex shader.
 const vertexShader = gl.createShader(gl.VERTEX_SHADER);
-gl.shaderSource(vertexShader, await loadShader('./vertex.glsl'));
+gl.shaderSource(vertexShader, await loadShader('./vertex.vs'));
 gl.compileShader(vertexShader);
 ```
 
@@ -181,7 +181,7 @@ Now we can repeat the same steps for the fragment shader.
 ```js
 // Create and compile the fragment shader.
 const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-gl.shaderSource(fragmentShader, await loadShader('./fragment.glsl'));
+gl.shaderSource(fragmentShader, await loadShader('./fragment.fs'));
 gl.compileShader(fragmentShader);
 if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
   throw new Error(gl.getShaderInfoLog);
