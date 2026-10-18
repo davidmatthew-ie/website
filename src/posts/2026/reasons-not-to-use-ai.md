@@ -3,6 +3,7 @@ title: Good Reasons Not to Use or Rely on Generative AI
 description: An organised collection of (what I consider to be) sensible, defensible reasons not to use or rely on Generative AI.
 slug: reasons-not-to-use-or-rely-on-generative-ai
 date: 2026-08-03
+updated: 2026-10-11
 tags:
   - x
   - AI
@@ -20,6 +21,10 @@ This first stage is rife with ethical concerns. Popular Gen AI models don't just
 If an individual appropriates the artistic or intellectual work of another without permission or attribution, it would be a clear case of copyright violation. When corporations do it however, and do so on a global scale, indiscriminately hoovering up all of humanity's hard-earned cultural treasures, it is exempted by governments and celebrated by proponents as fair use, even when that use is at its core primed to put the livelihoods of those it has stolen the most from at risk. Writers, artists, musicians and others who have dedicated themselves to their craft, and upon whom these Gen AI models most depend, are pilfered from without a penny's compensation.
 
 It is difficult not to see this as cultural theft on a colossal scale.
+
+More recently, this viewpoint has been vindicated following <a href="https://www.404media.co/doom-loop-openai-and-microsoft-admits-llms-are-destroying-the-web-and-built-on-theft/" target="_blank">the release of court documents</a>, where Microsoft's own Director of Applied Science is on record admitting that what they've been engaged in is:
+
+> An astonishing theft of unprecedented proportions... [perhaps] the largest theft of labor in human history.
 
 ### The Absence of Understanding
 

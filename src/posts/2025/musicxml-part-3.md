@@ -33,10 +33,10 @@ We'll insert a `<rest>` into the base clef, between the `D#` and `F`. At the mom
     <alter>1</alter>
     <octave>3</octave>
   </pitch>
-  <duration>4</duration><!--[!code highlight]-->
-  <type>half</type><!--[!code highlight]-->
-  <duration>2</duration><!--[!code ++]-->
-  <type>quarter</type><!--[!code ++]-->
+  <duration>4</duration>// [!code --]
+  <type>half</type>// [!code --]
+  <duration>2</duration>// [!code ++]
+  <type>quarter</type>// [!code ++]
   <accidental>sharp</accidental>
   <staff>2</staff>
 </note>
@@ -88,9 +88,9 @@ We're beginning our tie on the aforementioned `D#`, so it takes a type of `start
   <accidental>sharp</accidental>
   <voice>2</voice>
   <staff>1</staff>
-  <notations><!--[!code ++]-->
-    <tied type="start"/><!--[!code ++]-->
-  </notations><!--[!code ++]-->
+  <notations>// [!code ++]
+    <tied type="start"/>// [!code ++]
+  </notations>// [!code ++]
 </note>
 ```
 
@@ -98,8 +98,8 @@ No tie will appear in the score at this point, as a `start` tie needs a correspo
 
 ```xml
 <notations>
-  <tied type="start"/><!--[!code highlight]-->
-  <tied type="stop"/><!--[!code ++]-->
+  <tied type="start"/>// [!code --]
+  <tied type="stop"/>// [!code ++]
 </notations>
 ```
 
@@ -122,14 +122,14 @@ It's best practice in MusicXML to include as much known information about the mu
 ```xml
 <note>
   ...
-  <tie type="start"/><!--[!code ++]-->
+  <tie type="start"/>// [!code ++]
   <notations>
     <tied type="start"/>
   </notations>
 </note>
 <note>
   ...
-  <tie type="stop"/><!--[!code ++]-->
+  <tie type="stop"/>// [!code ++]
   <notations>
     <tied type="stop"/>
   </notations>
@@ -148,11 +148,11 @@ We'll keep things relatively simple and beam together a couple of quavers (eight
     <step>A</step>
     <octave>4</octave>
   </pitch>
-  <duration>2</duration><!--[!code highlight]-->
-  <duration>1</duration><!--[!code ++]-->
+  <duration>2</duration>// [!code --]
+  <duration>1</duration>// [!code ++]
   <voice>1</voice>
-  <type>quarter</type><!--[!code highlight]-->
-  <type>eighth</type><!--[!code ++]-->
+  <type>quarter</type>// [!code --]
+  <type>eighth</type>// [!code ++]
   <staff>1</staff>
 </note>
 ```
@@ -202,14 +202,14 @@ We'll connect the `A` to the just created `F` with these simple additions:
     <step>A</step>
     ...
   <staff>1</staff>
-  <beam number="1">begin</beam><!--[!code ++]-->
+  <beam number="1">begin</beam>// [!code ++]
 </note>
 <note>
   <pitch>
     <step>F</step>
     ...
   <staff>1</staff>
-  <beam number="1">end</beam><!--[!code ++]-->
+  <beam number="1">end</beam>// [!code ++]
 </note>
 ```
 
@@ -252,9 +252,9 @@ The `<tuplet>` element is nested within the `<notations>` element, and it has on
     <octave>4</octave>
   </pitch>
   ...
-  <notations><!--[!code ++]-->
-    <tuplet type="start" bracket="no" placement="above" /><!--[!code ++]-->
-  </notations><!--[!code ++]-->
+  <notations>// [!code ++]
+    <tuplet type="start" bracket="no" placement="above" />// [!code ++]
+  </notations>// [!code ++]
 </note>
 ```
 
@@ -268,9 +268,9 @@ Updating the `F`, where our tuplet comes to a close, is more straightforward:
     <alter>1</alter>
   </pitch>
   ...
-  <notations><!--[!code ++]-->
-    <tuplet type="stop" /><!--[!code ++]-->
-  </notations><!--[!code ++]-->
+  <notations>// [!code ++]
+    <tuplet type="stop" />// [!code ++]
+  </notations>// [!code ++]
 </note>
 ```
 
@@ -299,10 +299,10 @@ This markup needs to be present in all notes contained in the tuplet - the `A`, 
   </pitch>
   ...
   <beam number="1">begin</beam>
-  <time-modification><!--[!code ++]-->
-    <actual-notes>3</actual-notes><!--[!code ++]-->
-    <normal-notes>2</normal-notes><!--[!code ++]-->
-  </time-modification><!--[!code ++]-->
+  <time-modification>// [!code ++]
+    <actual-notes>3</actual-notes>// [!code ++]
+    <normal-notes>2</normal-notes>// [!code ++]
+  </time-modification>// [!code ++]
   <notations>
     <tuplet type="start" bracket="no" placement="above" />
   </notations>
@@ -313,8 +313,8 @@ Once copied into all three notes the tuplet should show, so we've fixed that pro
 
 ```xml
 <backup>
-  <duration>6</duration><!--[!code highlight]-->
-  <duration>7</duration><!--[!code ++]-->
+  <duration>6</duration>// [!code --]
+  <duration>7</duration>// [!code ++]
 </backup>
 ```
 
