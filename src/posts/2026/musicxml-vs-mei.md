@@ -1,7 +1,7 @@
 ---
 title: Comparing MusicXML and MEI (Music Encoding Initiative) by Example
 slug: musicxml-vs-mei-by-example
-date: 2026-10-02
+date: 2026-10-18
 description: Using a small musical passage I compare the markup of MusicXML and MEI.
 tags: ['x', 'Music', 'MusicXML', 'MEI']
 ---
@@ -20,14 +20,14 @@ First off, it's only fair to clarify that MusicXML and MEI were never intended t
 
 MEI, which stands for Music Encoding Initiative, is an umbrella term for a markup language, an organization, and the community that supports it. It is the older of the two formats, created by Perry Rolands in 1999. It was developed as an encoding format for musical documents (manuscripts, critical editions etc) with an intended audience of academics in fields such as musicology and the digital humanities. As such, it focuses on representing the semantics and depth of historical musical documents mainly for the purposes of preservation and research.
 
-MusicXML, on the other hand, had from the start a more immediate and practical aim: to become the de-facto format for the interchange of sheet music between  different software applications. And it has, to that end, succeeded. If you want to export or import music notation from one piece of software to another (e.g. from Sibelius to MuseScore) MusicXML is the go-to file format. It largely restricts itself to Common Western Notation from the 17th century onwards, so is less ambitious in scope than MEI (which also supports neumes and mensural notation).
+MusicXML, on the other hand, had from the start a more immediate and practical aim: to become the de-facto format for the interchange of sheet music between  different software applications. And it has, to that end, succeeded. If you want to export or import music notation from one piece of software to another (e.g. from Sibelius to MuseScore) MusicXML is the go-to file format. It largely restricts itself to Common Western Notation from the 17th century onward, so is less ambitious in scope than MEI (which also supports neumes and mensural notation).
 
 MusicXML was created by Michael Good and first released in 2004, initially under the stewardship of Recordare LLC, Good's own commercial entity, and later, MakeMusic, the developers of Finale. In 2015 however development was taken over by the W3C Music Notation Community Group. It is still being actively maintained and improved, but work has been underway on its planned successor, MNX, <a href="https://www.w3.org/community/music-notation/2016/05/19/introducing-mnx/" target="_blank">since 2016</a>. And although it remains to be seen whether MNX will in fact replace MusicXML "out in the wild" so to speak, MEI has no comparative threat of being deemed a legacy format.
 
 
 ## The Music We'll Mark Up
 
-Below is the two-bar passage for which we'll compare the markup. As you can see, it features two staves with a time and key signature, notes of different durations, a rest, chords, separate voices, beams, a barline, and some directions and dynamics. It gives us more material for a meaningful comparison than a single middle C (the typical 'hello world' of musical markup) without being needlessly long or repetitive.
+Below is the two-bar passage for which we'll compare the markup. As you can see, it features two staves with a time and key signature, notes of different duration, a rest, chords, separate voices, beams, a barline, and some directions and dynamics. It gives us more material for a meaningful comparison than a single middle C (the typical 'hello world' of musical markup) without being needlessly long or repetitive.
 
 ![MusicXML Tutorial 3 Result](../../media/2026/musicxml-tutorial-3-result.svg)
 
@@ -536,7 +536,7 @@ While certain elements may be more relevant to some domains than others, MEI in 
 
 In the example piece, there are two staves and, in the first measure of the treble clef, two voices. MusicXML handles these simultaneous-yet-separate sequences of notes by using special `<backup>` and `<forward>` instructional elements that essentially allow us rewind or fast-forward to certain points along the score's timeline.
 
-For example, after the final note of the tuplet (`F`) in the treble clef, the next note below it is the `B` in the second (lower) voice. To get this to appear at the correct point in the timeline, the `<backup>` element is used to rewind the duration by 7 "ticks" (the amount of durational units that have elapsed so far in the first voice, taking into account the tuplet's time modification).
+For example, after the final note of the tuplet (`F`) in the treble clef, the next note below it is the `B` in the second (lower) voice. To get this to appear at the correct point in the timeline, the `<backup>` element is used to rewind the duration by 7 "ticks" (the number of units of duration that have elapsed so far in the first voice, taking into account the tuplet's time modification).
 
 ```xml
 <note>
