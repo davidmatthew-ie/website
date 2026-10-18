@@ -1,54 +1,91 @@
 ---
 import CalendarIcon from '@icons/calendar-03-duotone-rounded.svg';
 import TagsIcon from '@icons/tags-duotone-rounded.svg';
+import UserIcon from '@icons/user-circle-duotone-rounded.svg';
+import TimerIcon from '@icons/clock-05-bulk-rounded.svg';
 import { formatDate, slugify } from '../js/utils';
 
-const { date, tags, updated } = Astro.props;
+const { date, tags, updated, readingTime } = Astro.props;
 ---
+<div class="grid grid-cols-2 text-sm md:text-base">
 
-<div class="flex items-center mb-4 animate-fade-in-left" style="animation-delay: 100ms; animation-fill-mode: both;">
+	<div class="col-span-2 md:col-span-1">
 
-	<span class="inline-block">
+		<div class="flex items-center mb-2 md:mb-4 animate-fade-in-left" style="animation-delay: 100ms; animation-fill-mode: both;">
 
-		<CalendarIcon class="w-6 min-w-6" />
+			<span class="inline-block">
 
-	</span>
+				<CalendarIcon class="size-6" />
 
-	<span class="ml-2 mr-3 text-zinc-400">
+			</span>
 
-		Published { formatDate(date) }
+			<span class="ml-2 text-zinc-400">
 
-		{ updated && `(Updated ${ formatDate(updated) })` }
+				Published {formatDate(date)}
 
-	</span>
+				{updated && ` (Updated ${ formatDate(updated) })`}
 
-</div>
+			</span>
 
-<div class="flex items-center pb-4 animate-fade-in-left" style="animation-delay: 175ms; animation-fill-mode: both;">
+		</div>
 
-	<span class="inline-block">
+		<div class="flex items-center mb-2 md:mb-4 animate-fade-in-left" style="animation-delay: 175ms; animation-fill-mode: both;">
 
-		<TagsIcon class="w-6 min-w-6" />
+			<span class="inline-block">
 
-	</span>
+				<TagsIcon class="size-6" />
 
-	<span class="ml-2 text-zinc-400">
+			</span>
 
-		{
-			tags.map((tag : string, index : number) => {
-				if (tag !== 'x') {
-					return (
-						<>
-							<a class="no-underline text-zinc-400 hover:text-zinc-300" href={ `/tag/${slugify(tag)}/` }>
-								{ tag }
-							</a>
-							{ index !== tags.length - 1 && ', ' }
-						</>
-					)
+			<span class="ml-2 text-zinc-400">
+
+				{
+					tags.map((tag : string, index : number) => {
+						if (tag !== 'x') {
+							return (
+								<>
+									<a href={`/tag/${slugify(tag)}/`} class="no-underline font-normal text-zinc-400 hover:text-zinc-300">
+										{tag}
+									</a>
+									{index !== tags.length - 1 && ', '}
+								</>
+							)
+						}
+					})
 				}
-			})
-		}
 
-	</span>
+			</span>
+
+		</div>
+
+	</div>
+
+	<div class="col-span-2 md:col-span-1">
+
+		<div class="flex items-center mb-2 md:mb-4 animate-fade-in-right" style="animation-delay: 100ms; animation-fill-mode: both">
+
+			<span class="inline-block">
+
+				<UserIcon class="size-6" />
+
+			</span>
+
+			<span class="ml-2 text-zinc-400">100% Human-Written, Always</span>
+
+		</div>
+
+		<div class="flex items-center mb-2 md:mb-4 animate-fade-in-right" style="animation-delay: 175ms; animation-fill-mode: both">
+
+			<span class="inline-block">
+
+				<TimerIcon class="size-6" />
+
+			</span>
+
+			<span class="ml-2 text-zinc-400">{readingTime}</span>
+
+		</div>
+
+	</div>
 
 </div>

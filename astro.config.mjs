@@ -1,5 +1,7 @@
 import { defineConfig, fontProviders } from 'astro/config';
 import { transformerNotationDiff, transformerNotationHighlight } from '@shikijs/transformers';
+import { satteri } from "@astrojs/markdown-satteri";
+import { readingTimePlugin } from './src/js/readingTime';
 import customTheme from './src/assets/shiki/classic-dark.json';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from "@astrojs/sitemap";
@@ -22,6 +24,9 @@ export default defineConfig({
     }
   ],
   markdown: {
+    processor: satteri({
+      mdastPlugins: [readingTimePlugin]
+    }),
     shikiConfig: {
       theme: customTheme,
       transformers: [
