@@ -176,24 +176,25 @@ pre code {
 
 pre code .diff,
 pre code .highlighted {
-  font-weight: 700;
   display: inline-block;
   min-width: 100%;
   padding: --spacing(0.5) --spacing(2);
   margin-left: --spacing(-2);
 }
 
+pre code .highlighted {
+  background-color: var(--color-zinc-800);
+}
+
 pre code .diff.add {
   background-color: #2ea04330;
 }
 
-pre code .diff.remove,
-pre[data-language="xml"] .highlighted {
+pre code .diff.remove {
   background-color: #f8514928;
 }
 
-pre code .diff::before,
-pre[data-language="xml"] .highlighted::before {
+pre code .diff::before {
   position: absolute;
   left: --spacing(2);
   display: flex;
@@ -206,8 +207,7 @@ pre code .diff.add::before {
   color: #2ea043;
 }
 
-pre code .diff.remove::before,
-pre[data-language="xml"] .highlighted::before {
+pre code .diff.remove::before {
   content: '-';
   color: #FF9492;
 }

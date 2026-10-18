@@ -5,16 +5,21 @@ import PageTitle from '@components/PageTitle.astro';
 import PostMeta from '@components/PostMeta.astro';
 import Progress from '@components/Progress.astro';
 
-const { frontmatter, headings } = Astro.props;
+const { frontmatter, headings, readingTime } = Astro.props;
 ---
 
-<Base title={ frontmatter.title } description={ frontmatter.description }>
+<Base title={frontmatter.title} description={frontmatter.description}>
 
   <article class="overflow-hidden col-span-4 xl:col-span-3 lg:px-24">
 
-    <PageTitle title={ frontmatter.title } />
+    <PageTitle title={frontmatter.title} />
 
-    <PostMeta date={ frontmatter.date } tags={ frontmatter.tags } updated={ frontmatter.updated } />
+    <PostMeta
+      date={frontmatter.date}
+      tags={frontmatter.tags}
+      updated={frontmatter.updated}
+      readingTime={readingTime}
+      />
 
     <div class="animate-fade-in-up">
 
@@ -24,7 +29,7 @@ const { frontmatter, headings } = Astro.props;
 
   </article>
 
-  <PageNav headings={ headings } />
+  <PageNav headings={headings} />
 
   <Progress />
 

@@ -6,25 +6,26 @@ type Heading = {
 };
 
 const { headings } = Astro.props as { headings: Heading[] };
+const h2Classes = 'pl-3 text-zinc-200 hover:text-white';
+const h3Classes = 'pl-5 text-zinc-400 hover:text-zinc-300';
+const listClasses = 'text-sm my-0 border-l-2 border-zinc-600 first:border-yellow-400 transition sm:text-base md:text-lg md:leading-8';
+const linkClasses = 'no-underline font-normal transition';
 ---
 
-{ headings && headings.length > 0 &&
+{
+	headings && headings.length > 0 &&
 
   <h4 class="text-lg mt-0 mb-1 md:text-xl">Contents</h4>
 
-	<ul class="ml-1 my-0 px-0 list-none leading-none">
+	<ul class="page-nav ml-1 my-0 px-0 list-none leading-none">
 
 		{
 			headings.map((heading) => {
 				if (heading.depth < 4) {
-					const headingLevelClasses = heading.depth === 2 ? 'pl-3 hover:text-white' : 'pl-5 text-zinc-400 hover:text-zinc-300';
-					const listClasses = `text-base my-0 pb-1 border-zinc-600 ${ headingLevelClasses } md:text-lg lg:border-l-2`;
-					const linkClasses = 'no-underline font-normal text-inherit visited:text-inherit transition';
-
 					return (
-						<li class={ listClasses }>
-							<a href={`#${heading.slug}`} class={ linkClasses }>
-								{ heading.text }
+						<li class={listClasses}>
+							<a href={`#${heading.slug}`} class={`${linkClasses} ${heading.depth === 2 ? h2Classes : h3Classes}`}>
+								{heading.text}
 							</a>
 						</li>
 					)
@@ -35,3 +36,42 @@ const { headings } = Astro.props as { headings: Heading[] };
 	</ul>
 
 }
+
+<script>
+	// Viewport-controlled intersection, clipped by 50% at the bottom.
+	const observeHeadings = new IntersectionObserver(setActive, {
+    root: null,
+		rootMargin: '0% 0% -50% 0%'
+	});
+
+	// Get the relevant headings and list items.
+	const headingElements = document.querySelectorAll('h2, h3');
+	const headingListItems = document.querySelectorAll('.page-nav li');
+
+	// Attach the observer to each heading.
+	headingElements.forEach(element => {
+		observeHeadings.observe(element);
+	});
+
+	// Callback that sets the currently active heading.
+	function setActive(entries) {
+		entries.map(entry => {
+			if (entry.isIntersecting === true) {
+
+				// Reset the border styling of each list item.
+				headingListItems.forEach(item => {
+					item.style.borderLeft = '';
+					item.classList.remove('first:border-yellow-400');
+				});
+
+				// Get the links that corresponds to the heading id (mobile and desktop).
+				const links = document.querySelectorAll(`a[href="#${entry.target.id}"]`);
+
+				// Update their parent (li) border styling.
+				links.forEach(link => {
+					link.parentElement.style.borderLeft = '2px solid var(--color-yellow-400)';
+				});
+			}
+    });
+	}
+</script>
