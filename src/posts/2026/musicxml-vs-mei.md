@@ -2,6 +2,7 @@
 title: Comparing MusicXML and MEI (Music Encoding Initiative) by Example
 slug: musicxml-vs-mei-by-example
 date: 2026-10-18
+updated: 2026-10-20
 description: Using a small musical passage I compare the markup of MusicXML and MEI.
 tags: ['x', 'Music', 'MusicXML', 'MEI']
 ---
@@ -18,7 +19,7 @@ In this post I'll try to redress some of these shortcomings by focusing on a sma
 
 First off, it's only fair to clarify that MusicXML and MEI were never intended to directly compete with one another. Yes, they're both open-source XML formats for the representation of music notation, but they were developed for different reasons.
 
-MEI, which stands for Music Encoding Initiative, is an umbrella term for a markup language, an organization, and the community that supports it. It is the older of the two formats, created by Perry Rolands in 1999. It was developed as an encoding format for musical documents (manuscripts, critical editions etc) with an intended audience of academics in fields such as musicology and the digital humanities. As such, it focuses on representing the semantics and depth of historical musical documents mainly for the purposes of preservation and research.
+MEI, which stands for Music Encoding Initiative, is an umbrella term for a markup language, an organization, and the community that supports it. It is the older of the two formats, created by Perry Roland in 1999. It was developed as an encoding format for musical documents (manuscripts, critical editions etc) with an intended audience of academics in fields such as musicology and the digital humanities. As such, it focuses on representing the semantics and depth of historical musical documents mainly for the purposes of preservation and research.
 
 MusicXML, on the other hand, had from the start a more immediate and practical aim: to become the de-facto format for the interchange of sheet music between  different software applications. And it has, to that end, succeeded. If you want to export or import music notation from one piece of software to another (e.g. from Sibelius to MuseScore) MusicXML is the go-to file format. It largely restricts itself to Common Western Notation from the 17th century onward, so is less ambitious in scope than MEI (which also supports neumes and mensural notation).
 
@@ -30,7 +31,6 @@ MusicXML was created by Michael Good and first released in 2004, initially under
 Below is the two-bar passage for which we'll compare the markup. As you can see, it features two staves with a time and key signature, notes of different duration, a rest, chords, separate voices, beams, a barline, and some directions and dynamics. It gives us more material for a meaningful comparison than a single middle C (the typical 'hello world' of musical markup) without being needlessly long or repetitive.
 
 ![MusicXML Tutorial 3 Result](../../media/2026/musicxml-tutorial-3-result.svg)
-
 
 ## The MusicXML
 
@@ -668,7 +668,7 @@ This dominance has led to the deprecation of the timewise approach as of version
 
 ## Summary
 
-So to recap, both MEI and MusicXML are long-established and battle-tested formats developed for different end-goals. MusicXML is primarily an interchange format that allows for the transfer of scores between different notation programs, whereas MEI is mainly an encoding format for research and preservation and supports mensural and other historical forms of notation.
+So to recap, both MEI and MusicXML are long-established and battle-tested formats developed for different end-goals. MusicXML is primarily an interchange format that allows for the transfer of scores between different notation programs, whereas MEI is mainly an encoding format for research and preservation of musical documents and supports mensural and other historical forms of notation.
 
-MusicXML is the more verbose of the two, and favours elements over attributes. MEI's use of attributes and truncated terms, on the other hand, makes it much more concise, evident when comparing uncompressed file sizes and lines of code. MusicXML element names may be spelled out more explicitly, but it's hard to argue that it's more readable on that front alone, especially when we take MEI's grouping of elements like chords, beams and staves into account. And finally, from the point of view of score hierarchy, MusicXML tends to privileges parts over measures whereas MEI takes the opposite approach.
+MusicXML is the more verbose of the two, and favours elements over attributes. MEI's use of attributes and truncated terms, on the other hand, makes it much more concise, evident when comparing uncompressed file sizes and lines of code. MusicXML element names may be spelled out more explicitly, but it's hard to argue that it's more readable on that front alone, especially when we take MEI's grouping of elements like chords, beams and staves into account. When it comes to how music should sound versus how it should look, MusicXML tends to handle these using different elements. MEI has a more nuanced, multilayered approach rather than a binary split, and facilitates score analysis and commentary. And finally, from the point of view of score hierarchy, MusicXML tends to privileges parts over measures, whereas MEI takes the 'timewise' approach.
 
